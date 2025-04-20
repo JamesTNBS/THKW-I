@@ -1,0 +1,1055 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1a2526;
+    /* Dark mode background */
+    color: #ddd;
+    /* Dark mode text */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* container */
+.container {
+    max-width: 90%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 30px;
+    transition: margin-left 1.0s ease-in-out;
+}
+
+.container.shifted {
+    margin-left: 220px;
+    /* Same width as your side panel */
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2em;
+    color: #7348d9;
+    /* Dark mode title */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+h4 {
+    font-size: 2em;
+    color: #7348d9;
+}
+
+/* Top Stories Section */
+.top-stories {
+    margin-bottom: 40px;
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.story-card {
+    background: #222;
+    /* Dark mode card background */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.story-card:hover {
+    transform: scale(1.02);
+}
+
+.story-content {
+    padding: 15px;
+}
+
+.story-content h3 {
+    font-size: 1.2em;
+    color: #fff;
+    /* Dark mode title */
+    margin: 0 0 10px 0;
+    transition: color 0.3s ease;
+}
+
+.story-content p {
+    font-size: 0.9em;
+    color: #bbb;
+    /* Dark mode description */
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+/* Main Content */
+.main-content {
+    margin-bottom: 40px;
+}
+
+.articles-list {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.article-item {
+    display: flex;
+    align-items: center;
+    background: #222;
+    /* Dark mode article background */
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.article-item:hover {
+    transform: scale(1.01);
+}
+
+.article-content {
+    flex: 1;
+}
+
+.article-content h3 {
+    font-size: 1.2em;
+    color: #fff;
+    /* Dark mode title */
+    margin: 0 0 5px 0;
+    transition: color 0.3s ease;
+}
+
+.article-content p {
+    font-size: 0.9em;
+    color: #bbb;
+    /* Dark mode description */
+    margin: 0 0 5px 0;
+    transition: color 0.3s ease;
+}
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85em;
+    color: #888;
+    /* Dark mode meta text */
+    transition: color 0.3s ease;
+}
+
+.article-meta .tag {
+    background: #444;
+    /* Dark mode tag background */
+    padding: 2px 8px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.article-meta .author {
+    color: #aaa;
+    /* Dark mode author text */
+    transition: color 0.3s ease;
+}
+
+/* More Stories Section */
+.more-stories {
+    margin-top: 40px;
+}
+
+.stories-list {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.story-item {
+    width: 76%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    background: #222;
+    /* Dark mode story background */
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.story-item:hover {
+    transform: scale(1.01);
+}
+
+.story-item .story-content h3 {
+    font-size: 1.1em;
+    color: #fff;
+    /* Dark mode title */
+    margin: 0 0 5px 0;
+    transition: color 0.3s ease;
+}
+
+.story-item .story-content p {
+    font-size: 0.85em;
+    color: #bbb;
+    /* Dark mode description */
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+/* light mode */
+.toggle-light-mode {
+    background: #fff;
+    /* Dark mode toggle background */
+    color: #000;
+    /* Dark mode toggle icon */
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 50%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode theme styles */
+body.light {
+    background: #f4f4f4;
+    /* Light mode background */
+    color: #222;
+    /* Light mode text */
+}
+
+body.light .container {
+    background: transparent;
+    /* No background needed for container in light mode */
+}
+
+body.light .section-title {
+    color: #333;
+    /* Light mode title */
+}
+
+body.light .story-card,
+body.light .article-item,
+body.light .story-item {
+    background: #d3d3d3;
+    /* Light mode card/article background */
+}
+
+body.light .story-content h3,
+body.light .article-content h3 {
+    color: #333;
+    /* Light mode title */
+}
+
+body.light .story-content p,
+body.light .article-content p {
+    color: #666;
+    /* Light mode description */
+}
+
+body.light .article-meta {
+    color: #555;
+    /* Light mode meta text */
+}
+
+body.light .article-meta .tag {
+    background: #ccc;
+    /* Light mode tag background */
+}
+
+body.light .article-meta .author,
+body.light .article-meta .comments,
+body.light .article-meta .duration {
+    color: #666;
+    /* Light mode meta text */
+}
+
+body.light .toggle-light-mode {
+    background: #222;
+    /* Light mode toggle background */
+    color: #fff;
+    /* Light mode toggle icon */
+}
+
+/* Dark mode (default) */
+body.dark {
+    background: #121212;
+    color: #ddd;
+}
+
+body.dark .container {
+    background: transparent;
+}
+
+body.dark .toggle-light-mode {
+    background: #fff;
+    color: #000;
+}
+
+/* 3 line */
+.menu-toggle {
+    position: fixed;
+    top: 5px;
+    left: 10px;
+    z-index: 1100;
+    background: none;
+    font-size: 24px;
+    transition: left 0.2s ease;
+    cursor: pointer;
+}
+
+.side-panel.open~.menu-toggle {
+    left: 180px;
+    /* moves button to the right when panel is open */
+}
+
+.menu-toggle i {
+    color: #fff;
+    /* Dark mode menu icon */
+    transition: color 0.3s ease;
+}
+
+body.light .menu-toggle i {
+    color: #000;
+    /* Light mode menu icon */
+}
+
+/* side panel */
+.side-panel {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    width: 190px;
+    background: #121212;
+    /* Dark mode side panel background */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    transition: left 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.side-panel.open {
+    left: 0;
+    /* Slide the panel into view */
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* user display */
+#user-display {
+    position: relative;
+    /* Required for pseudo-element positioning */
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #2b2b2b;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.3s ease, color 0.3s ease;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+/* separate */
+.separate1 {
+    margin-top: 25px;
+    border-bottom: 3px solid #444;
+    /* Dark mode separator color */
+    transition: background 0.3s ease;
+}
+
+body.light .separate1 {
+    border-bottom: 3px solid #ccc;
+    /* Light mode separator color */
+}
+
+.separate2 {
+    margin-bottom: 100px;
+    border-bottom: 3px solid #444;
+    /* Dark mode separator color */
+    transition: background 0.3s ease;
+}
+
+body.light .separate2 {
+    border-bottom: 3px solid #ccc;
+    /* Light mode separator color */
+}
+
+.separate3 {
+    margin-top: 30px;
+    border-bottom: 3px solid #444;
+    /* Dark mode separator color */
+    transition: background 0.3s ease;
+}
+
+body.light .separate3 {
+    border-bottom: 3px solid #ccc;
+    /* Light mode separator color */
+}
+
+.side-panel .nav-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    /* Extra padding for spacing */
+    /* Separator after nav links in dark mode */
+    margin-bottom: 20px;
+    /* Space below the separator */
+}
+
+.side-panel .nav-links a {
+    margin: 10px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    color: #7348d9;
+    /* Dark mode link color */
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.side-panel .nav-links a:hover,
+.side-panel .nav-links a:active {
+    background-color: #5a3db1;
+    color: #fff;
+    /* Hover text color remains white in both modes */
+}
+
+/* Active link background */
+.side-panel .nav-links a.active {
+    background-color: #9476ed;
+    /* Active link background */
+    color: #fff;
+    /* Active link text */
+}
+
+body.light .side-panel {
+    background: #fff;
+    /* Light mode side panel background */
+}
+
+body.light .side-panel .nav-links a {
+    color: #5a3db1;
+    /* Light mode link color */
+}
+
+body.light .side-panel .nav-links a:hover,
+body.light .side-panel .nav-links a:active {
+    background-color: #5a3db1;
+    color: #fff;
+}
+
+/* Login button */
+#login-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #4caf50;
+    /* Dark mode login button background */
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#login-btn:hover {
+    background-color: #388e3c;
+}
+
+body.light #login-btn {
+    background-color: #4caf50;
+    /* Keep the same color for consistency */
+}
+
+/* logout button */
+#logout-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 50%;
+    background-color: #d9534f;
+    /* Dark mode logout button background */
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+    /* hidden by default */
+    transition: background-color 0.3s ease;
+}
+
+#logout-btn:hover {
+    background-color: #c9302c;
+}
+
+body.light #logout-btn {
+    background-color: #d9534f;
+    /* Keep the same color for consistency */
+}
+
+/* Login popup */
+.login-popup {
+    display: none;
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    /* Dark mode popup overlay */
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+body.light .login-popup {
+    background: rgba(255, 255, 255, 0.8);
+    /* Light mode popup overlay */
+}
+
+.login-content {
+    background: #1e1e1e;
+    /* Dark mode popup background */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    color: white;
+    /* Dark mode popup text */
+    width: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.light .login-content {
+    background: #fff;
+    /* Light mode popup background */
+    color: #333;
+    /* Light mode popup text */
+}
+
+.login-content input {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    background: #2b2b2b;
+    /* Dark mode input background */
+    color: #fff;
+    /* Dark mode input text */
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+body.light .login-content input {
+    background: #fff;
+    /* Light mode input background */
+    color: #333;
+    /* Light mode input text */
+    border: 1px solid #ccc;
+    /* Light mode input border */
+}
+
+.login-content button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background: #7348d9;
+    /* Dark mode button background */
+    color: white;
+    /* Dark mode button text */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+body.light .login-content button {
+    background: #5a3db1;
+    /* Light mode button background (slightly adjusted for contrast) */
+    color: white;
+}
+
+.close-login {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+    /* Dark mode close icon */
+    transition: color 0.3s ease;
+}
+
+body.light .close-login {
+    color: #000;
+    /* Light mode close icon */
+}
+
+/* Hover effects */
+body.dark .toggle-light-mode:hover {
+    background: #5a3db1;
+}
+
+body.light .toggle-light-mode:hover {
+    background: #3e2a8b;
+}
+
+.menu-toggle:hover {
+    background-color: #5a3db1;
+}
+
+body.light .menu-toggle:hover {
+    background-color: #3e2a8b;
+}
+
+.login-content button:hover,
+.toggle-light-mode:hover {
+    background: #5a3db1;
+    transform: scale(1.05);
+}
+
+body.light .login-content button:hover,
+body.light .toggle-light-mode:hover {
+    background: #3e2a8b;
+}
+
+.login-content button:active,
+body.dark .toggle-light-mode:active,
+.menu-toggle:active,
+.toggle-light-mode:active {
+    background: #3e2a8b;
+    transform: scale(1);
+}
+
+body.light .login-content button:active,
+body.light .toggle-light-mode:active {
+    background: #2a1e6b;
+}
+
+/* Search Popup */
+.search-popup {
+    display: none;
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 105vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    /* Dark mode popup overlay */
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    scrollbar-width: thin;
+    scrollbar-color: #7348d9 #333;
+}
+
+.search-results::-webkit-scrollbar {
+    width: 10px;
+}
+
+.search-results::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 5px;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background: #7348d9;
+    border-radius: 5px;
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+    background: #5a3db1;
+}
+
+body.light .search-results {
+    background: #f0f0f0;
+    color: #333;
+    scrollbar-color: #5a3db1 #e0e0e0;
+}
+
+body.light .search-results::-webkit-scrollbar-track {
+    background: #e0e0e0;
+}
+
+body.light .search-results::-webkit-scrollbar-thumb {
+    background: #5a3db1;
+}
+
+body.light .search-results::-webkit-scrollbar-thumb:hover {
+    background: #3e2a8b;
+}
+
+body.light .search-popup {
+    background: rgba(255, 255, 255, 0.8);
+    /* Light mode popup overlay */
+}
+
+.search-content {
+    background: #1e1e1e;
+    /* Dark mode popup background */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    color: white;
+    /* Dark mode popup text */
+    width: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.light .search-content {
+    background: #fff;
+    /* Light mode popup background */
+    color: #333;
+    /* Light mode popup text */
+}
+
+.search-content input {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    background: #2b2b2b;
+    /* Dark mode input background */
+    color: #fff;
+    /* Dark mode input text */
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+body.light .search-content input {
+    background: #fff;
+    /* Light mode input background */
+    color: #333;
+    /* Light mode input text */
+    border: 1px solid #ccc;
+    /* Light mode input border */
+}
+
+.search-content button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background: #7348d9;
+    /* Dark mode button background */
+    color: white;
+    /* Dark mode button text */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-content button:hover {
+    transform: scale(1.02);
+    background: #7348d9;
+    /* Dark/light mode hover */
+}
+
+body.light .search-content button {
+    background: #5a3db1;
+    /* Light mode button background (slightly adjusted for contrast) */
+    color: white;
+}
+
+.close-search {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+    /* Dark mode close icon */
+    transition: color 0.3s ease;
+}
+
+body.light .close-search {
+    color: #000;
+    /* Light mode close icon */
+}
+
+/* Search results container */
+.search-results {
+    
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 5px;
+    background: #2b2b2b;
+    /* Dark mode background */
+    color: #fff;
+    /* Dark mode text */
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.light .search-results {
+    background: #f0f0f0;
+    /* Light mode background */
+    color: #333;
+    /* Light mode text */
+}
+
+/* Mini card styling */
+.mini-card {
+    display: flex;
+    align-items: center;
+    background: #3a3a3a;
+    /* Dark mode card background */
+    border: 1px solid #555;
+    /* Dark mode border */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 8px;
+    transition: transform 0.3s ease, background 0.3s ease, border 0.3s ease;
+}
+
+body.light .mini-card {
+    background: #fff;
+    /* Light mode card background */
+    border: 1px solid #ddd;
+    /* Light mode border */
+}
+
+.mini-card:hover {
+    transform: scale(1.02);
+    background: #4a4a4a;
+    /* Dark mode hover */
+}
+
+body.light .mini-card:hover {
+    background: #f5f5f5;
+    /* Light mode hover */
+}
+
+/* Mini card link (removes default link styling) */
+.mini-card-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Mini card image */
+.mini-card-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.story-card .mini-card-link img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+/* Images in Featured Articles (article-item) */
+.article-item .mini-card-link img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+/* Images in More Stories (story-item) */
+.story-item .mini-card-link img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+/* Mini card content */
+.mini-card-content {
+    flex: 1;
+}
+
+.mini-card-content h4 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #1e90ff;
+    /* Link color */
+}
+
+body.light .mini-card-content h4 {
+    color: #1e90ff;
+}
+
+.mini-card-content p {
+    margin: 0;
+    font-size: 12px;
+    color: #ccc;
+    /* Dark mode text */
+}
+
+body.light .mini-card-content p {
+    color: #666;
+    /* Light mode text */
+}
+
+.mini-card-content .snippet {
+    font-size: 11px;
+    color: #aaa;
+    /* Dark mode snippet */
+}
+
+body.light .mini-card-content .snippet {
+    color: #888;
+    /* Light mode snippet */
+}
+
+/* Highlighted text in snippet */
+.mini-card-content .highlight {
+    background: #7348d9;
+    /* Dark mode highlight */
+    color: #fff;
+    padding: 1px 3px;
+    border-radius: 3px;
+}
+
+body.light .mini-card-content .highlight {
+    background: #5a3db1;
+    /* Light mode highlight */
+}
+
+/* Ensure the link spans the entire card and looks seamless */
+.mini-card-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    /* Ensure it covers the entire card height */
+    cursor: pointer;
+    /* Indicate clickability */
+}
+
+/* Remove any default link underline or color changes */
+.mini-card-link:hover {
+    text-decoration: none;
+}
+
+/* Ensure the mini card itself doesn't interfere with the link */
+.mini-card {
+    display: flex;
+    align-items: center;
+    background: #3a3a3a;
+    border: 1px solid #555;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 8px;
+    transition: transform 0.3s ease, background 0.3s ease, border 0.3s ease;
+    width: 95%;
+    /* Ensure the card takes full width */
+}
+
+body.light .mini-card {
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.mini-card:hover {
+    transform: scale(1.02);
+    background: #4a4a4a;
+}
+
+body.light .mini-card:hover {
+    background: #f5f5f5;
+}
+
+/* Ensure articles support the clickable wrapper */
+.story-card,
+.article-item,
+.story-item {
+    position: relative;
+    width: 100%;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.story-card:hover,
+.article-item:hover,
+.story-item:hover {
+    transform: scale(1.02);
+}
+
+/* Ensure the link inside the article spans the entire area */
+.story-card .mini-card-link,
+.article-item .mini-card-link,
+.story-item .mini-card-link {
+    display: flex;
+    /* Match the existing layout */
+    flex-direction: column;
+    /* Stack image and content vertically for story-card */
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* For article-item and story-item, adjust flex direction to match their layout */
+.article-item .mini-card-link,
+.story-item .mini-card-link {
+    flex-direction: row;
+    /* Image and content side by side */
+    align-items: center;
+}
+
+/* Ensure images and text inside the link are not affected */
+.story-card img,
+.article-item img,
+.story-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.story-card .story-content,
+.article-item .article-content,
+.story-item .story-content {
+    flex: 1;
+}
+
+.story-card h3,
+.article-item h3,
+.story-item h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.story-card p,
+.article-item p,
+.story-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Ensure meta elements in article-item are styled correctly */
+.article-item .article-meta {
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    margin-top: 5px;
+}

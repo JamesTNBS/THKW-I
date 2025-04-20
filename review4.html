@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Razer Blade 16 (2025) Review</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+    <!-- Login -->
+    <div id="login-modal" class="login-popup">
+        <div class="login-content">
+            <span class="close-login" onclick="closeLoginPopup()">&times;</span>
+            <h4>Login Required</h4>
+            <input type="text" id="username" placeholder="Enter your username">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Side panel -->
+        <div class="side-panel" id="sidePanel">
+
+            <!-- show user name -->
+            <p id="user-display"><i class="fas fa-user"></i> <span id="username-text"></span></p>
+
+            <!-- Search Popup -->
+            <div id="search-modal" class="search-popup">
+                <div class="search-content">
+                    <span class="close-search" onclick="closeSearchPopup()">×</span>
+                    <h4>Search</h4>
+                    <input type="text" id="search-input" placeholder="Enter your search...">
+                    <button onclick="performSearch()">Search</button>
+                    <div id="search-results" class="search-results"></div>
+                </div>
+            </div>
+
+            <!-- separate line -->
+            <div class="separate1">
+            </div>
+
+            <div class="nav-links">
+                <a href="/index.html" class="active"><span>🏠</span>Home</a>
+                <a href="#search"><span>🔍</span>Search</a>
+                <a href="#overview">Overview</a>
+                <a href="#design">Design and Build</a>
+                <a href="#display">Display</a>
+                <a href="#performance">Performance</a>
+                <a href="#cooling">Thermals and Noise</a>
+                <a href="#battery">Battery Life</a>
+                <a href="#Price and Value">Price and Value</a>
+                <a href="#verdict">Verdict</a>
+            </div>
+
+            <div class="separate2">
+            </div>
+
+            <button class="toggle-light-mode">
+                <i class="fas fa-sun"></i>
+            </button>
+
+            <!-- login button -->
+            <button id="login-btn" onclick="checkLogin()">Login</button>
+
+            <!-- Add Logout button directly -->
+            <button id="logout-btn" onclick="logout()">Logout</button>
+
+            <!-- separate line -->
+            <div class="separate3">
+            </div>
+
+        </div>
+
+        <!-- 3-dot menu button -->
+        <button class="menu-toggle" onclick="toggleSidePanel()">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Content -->
+
+        <h1>Razer Blade 16 (2025) with RTX 5090: A Slim Powerhouse with a Premium Price</h1>
+        <div class="meta">By Tarr | April 13, 2025</div>
+
+        <div class="separate-main">
+        </div>
+
+        <h2 id="overview">Overview</h2>
+        <p>The Razer Blade 16 (2025) is a bold reinvention of Razer’s flagship gaming laptop, blending a strikingly thin
+            chassis with NVIDIA’s top-tier GeForce RTX 5090 Laptop GPU and AMD’s Ryzen AI 9 HX 370 processor. Designed
+            to compete with the likes of the ASUS ROG Zephyrus G16 and Alienware’s Area-51, this laptop prioritizes
+            portability and premium aesthetics while delivering high-end performance for gamers and creators. After
+            extensive testing—running benchmarks, gaming, and creative workloads—I’ve evaluated whether this sleek
+            machine justifies its $4,499-$4,899 price tag and how it stacks up in the competitive 2025 gaming laptop
+            market. Here’s the full review.</p>
+
+        <img src="images/razer-blade-16-2025-hero-1400x932.webp" alt="Razer Blade 16" class="hero"
+            onclick="openPopup(this.src)" />
+
+        <h2 id="design">Design and Build: The Thinnest Blade Yet</h2>
+        <p>Razer has shaved the Blade 16 down to a remarkable 0.59 inches at its thinnest point (0.69 inches at its
+            thickest), making it 30% slimmer and 15% lighter (4.6 lbs) than its 2024 predecessor. The CNC-milled
+            aluminum unibody, finished in a matte black anodized coating, exudes a MacBook-like sophistication, with the
+            glowing green Razer logo on the lid adding a touch of gaming flair. It’s a fingerprint magnet but cleans up
+            easily, maintaining its sleek, professional look.</p>
+        <img src="images/screen-1-1743126255145.jpg" alt="Razer Blade 16" class="hero" onclick="openPopup(this.src)" />
+        <img src="images/lid-1743126255144.jpg" alt="Razer Blade 16" class="hero" onclick="openPopup(this.src)" />
+        <p>The chassis feels rock-solid, with no flex in the keyboard deck or lid. At 13.98 x 9.86 inches, it slips
+            effortlessly into a backpack, rivaling ultrabooks in portability while packing far more power. The
+            redesigned thermal hood and vapor chamber cooling system are engineering marvels, allowing such a slim
+            profile to house the RTX 5090 without compromising performance—though not without some trade-offs, as we’ll
+            explore later. The minimalist design, with RGB lighting confined to the per-key Chroma keyboard, ensures
+            it’s as at home in a boardroom as it is at a LAN party.</p>
+        <img src="images/illuminated-1743126255145.jpg" alt="Razer Blade 16" class="hero"
+            onclick="openPopup(this.src)" />
+        <p>Ports are plentiful: two USB-C 4.0 (40Gbps, DisplayPort, Power Delivery), two USB-A 3.2 Gen 2, HDMI 2.1, a
+            3.5mm audio jack, an SDXC card reader, and a Kensington lock. The lack of Thunderbolt 4 is a minor
+            disappointment, and Ethernet requires a USB-C adapter, but the port selection is otherwise robust. The USB-C
+            ports connect via the iGPU, reducing GPU load for external displays, while HDMI ties directly to the RTX
+            5090.</p>
+            <img src="images/ports-1-1743126255144.jpg" alt="Razer Blade 16"
+            class="hero" onclick="openPopup(this.src)" />
+        <img src="images/ports-2-1743126255144.jpg" alt="Razer Blade 16"
+            class="hero" onclick="openPopup(this.src)" />
+
+        <h2 id="display">Display:OLED Excellence, But Not Perfect</h2>
+        <img src="images/6STnMfjGwCnctn65CPchnT-1200-80.jpg" alt="ROG Zephyrus G16" alt="Razer Blade 16" class="hero"
+            onclick="openPopup(this.src)" />
+        <p>The 16-inch QHD+ (2560x1600) OLED panel, running at 240Hz, is a standout feature. With 100% DCI-P3 coverage,
+            0.2ms response time, and factory-calibrated color profiles (P3 and sRGB), it delivers vibrant, accurate
+            visuals for gaming and creative work. The deep blacks and infinite contrast make games like Cyberpunk 2077
+            and Black Myth: Wukong pop, while the 240Hz refresh rate ensures silky-smooth motion in fast-paced titles
+            like Fortnite. NVIDIA’s Advanced Optimus and DLSS 4 maximize frame rates, leveraging the RTX 5090’s power
+            efficiently.</p>
+        <img src="images/calibration-1743126375671.jpg" alt="Razer Blade 16" class="hero"
+            onclick="openPopup(this.src)" />
+        <p>However, the display’s 400-nit peak brightness (slightly higher in HDR) is underwhelming for an OLED,
+            especially in bright environments, and HDR performance feels lackluster compared to mini-LED panels on
+            rivals like the MSI Titan 18 HX. The absence of a 4K option is also a missed opportunity, given the RTX
+            5090’s 4K gaming capabilities. Still, for QHD+ gaming and content creation, this OLED is among the best,
+            though it’s closely matched by the Gigabyte Aorus Master 16’s panel.</p>
+
+        <h2 id="performance">Performance: Power in a Slim Package
+        </h2>
+        <p>The Razer Blade 16 (2025) pairs the NVIDIA GeForce RTX 5090 Laptop GPU (24GB GDDR7 VRAM, 155W TGP, up to 175W
+            with Dynamic Boost) with the AMD Ryzen AI 9 HX 370 (12 cores, 24 threads, 5.1GHz max boost, 80W TDP). My
+            test unit featured 32GB LPDDR5X-8000 RAM and a 2TB PCIe 4.0 SSD, with options up to 64GB RAM and 4TB
+            storage. This configuration, priced at $4,499, is a premium setup, but lower-tier models with RTX 5070 Ti or
+            5080 start at $2,999.</p>
+        <img src="images/razer-blade-16-2025-assassins-creed-shadows.webp" alt="Razer Blade 16" class="hero"
+            onclick="openPopup(this.src)" />
+
+        <p><b>Gaming Benchmarks</b></p>
+        <div class="Benchmarks">
+            <ul>
+                <li><b>Cyberpunk 2077 (QHD+, RT Overdrive, DLSS 4 Balanced, Multi Frame Gen):</b> 150 FPS average. With
+                    full path tracing, the RTX 5090’s 24GB VRAM and DLSS 4 delivered stunning visuals at playable frame
+                    rates.</li>
+                <li><b>Black Myth: Wukong (4K, Ultra, DLSS 4):</b> 85 FPS. The GPU’s efficiency shone, though thicker
+                    laptops with 175W RTX 5090s edged out slightly higher frames.</li>
+                <li><b>Metro Exodus Enhanced (QHD+, Extreme, No DLSS):</b> 62 FPS. Heavy ray tracing taxed the GPU, but
+                    it held up without upscaling.</li>
+                <li><b>Horizon Zero Dawn (4K, Ultra):</b> 92 FPS. The CPU’s multi-core performance handled open-world
+                    demands smoothly.</li>
+            </ul>
+        </div>
+        <p>Compared to the RTX 4090 Blade 16 (2024), the RTX 5090 offers a modest 4-7% raw performance boost in
+            synthetic benchmarks like 3DMark Time Spy, with gains up to 13% in newer tests like Steel Nomad. However,
+            DLSS 4 and Multi Frame Generation provide up to 2x frame rate improvements in supported titles, making the
+            upgrade noticeable. The 24GB VRAM is a boon for memory-hungry games and 4K textures, future-proofing the
+            laptop.</p>
+        <p>The Ryzen AI 9 HX 370, while efficient, is a step down from the Intel Core i9-14900HX in last year’s model,
+            with a lower TDP (80W vs. 120W). It still outperforms the ASUS Zephyrus G16’s Core Ultra 9 185H in
+            multi-core tasks but lags behind Intel’s Core Ultra 9 275HX in thicker laptops like the Alienware Area-51.
+            For QHD+ gaming, CPU bottlenecks were minimal, but 4K workloads occasionally showed slight constraints.</p>
+        <p><b>Creative Workloads</b></p>
+        <p>In Blender 4.2 (Cycles rendering), the RTX 5090 completed a complex scene 10% faster than the RTX 4090,
+            thanks to its larger VRAM and AI optimizations. Adobe Premiere Pro 4K video exports were swift, with the
+            GPU’s NVIDIA Studio drivers ensuring stability. The SSD’s 7GB/s read speeds made project loading
+            near-instantaneous. The Ryzen’s Neural Processing Unit (NPU, 50 TOPS) supports AI workflows like Windows
+            Copilot+, though real-world applications remain limited.</p>
+        <p><b>Everyday Performance</b></p>
+        <p>Windows 11 (Copilot+ certified) ran flawlessly, with Razer Synapse offering intuitive control over
+            performance modes (Silent, Balanced, Performance) and per-key RGB lighting. Multitasking—Chrome with 30
+            tabs, Discord, and Photoshop—was seamless, with the 32GB RAM and 12-core CPU handling everything
+            effortlessly. The laptop’s 280W GaN charger is compact but necessary for peak performance.</p>
+
+        <h2 id="cooling">Thermals and Noise: A Delicate Balance</h2>
+        <p>Razer’s vapor chamber cooling and redesigned thermal hood keep thermals in check, with GPU temps averaging
+            76°C and CPU at 80°C under load. Surface temperatures reached the mid-40s°C on the keyboard deck, warm but
+            not uncomfortable. However, the slim chassis limits cooling capacity compared to thicker laptops like the
+            Alienware Area-51, which sustain higher TGPs (175W) with quad fans.</p>
+            <img src="images/m2FALDyybjKQxwaWTMwRhC.jpg" alt="Razer Blade 16" class="hero" onclick="openPopup(this.src)" />
+        <p>Fan noise is noticeable during gaming, hitting 48dB, but quieter than last year’s model. In Silent mode, it’s
+            nearly inaudible for light tasks. Razer’s optional Laptop Cooling Pad ($150) boosts TGP to 175W and lowers
+            GPU temps by 9°C, but its loud fans detract from the experience. Overall, thermals are impressive for such a
+            thin design, though sustained 4K workloads push the limits.</p>
+        <img src="images/fan-closeup-1743126255145.jpg" alt="Razer Blade 16" class="hero" onclick="openPopup(this.src)" />
+
+        <h2 id="battery">Battery Life: Better Than Expected</h2>
+        <img src="images/razer-blade-16-2025-1.webp" alt="Razer Blade 16" class="hero"
+            onclick="openPopup(this.src)" />
+        <p>The 90Wh battery (smaller than last year’s 95.2Wh) delivers surprising longevity thanks to the RTX 5090’s
+            efficiency and the Ryzen’s low power draw. I averaged 8 hours for light productivity (web browsing, 50%
+            brightness) and 1 hour 20 minutes for gaming with Battery Boost enabled, which drops to 60Hz. This is a
+            significant improvement over the Alienware Area-51’s 2-hour max, though it’s still not a true all-day
+            machine.</p>
+
+        <h2 id="Price and Value">Pricing and Value: A Premium Proposition</h2>
+        <p>The Blade 16 (2025) with RTX 5090, Ryzen AI 9 HX 370, 32GB RAM, and 2TB SSD retails for $4,499, with the
+            maxed-out version (64GB RAM, 4TB SSD) at $4,899. This is $200-$450 more than the 2024 RTX 4090 model at
+            launch, reflecting the new GPU and slimmer design. Lower configs with RTX 5070 Ti or 5080 start at $2,999,
+            offering better value.</p>
+        <p>Compared to the Alienware Area-51 (RTX 5090, $3,799-$4,799), the Blade is pricier for similar specs but wins
+            on portability. The ASUS ROG Zephyrus G16 (RTX 5080, $3,799) is cheaper and nearly as thin but uses a
+            lower-TGP GPU. The MSI Titan 18 HX (RTX 5090, mini-LED) offers a better display for a similar price but is
+            bulkier. The Blade’s premium build, OLED, and slimness justify the cost for those prioritizing portability,
+            but budget-conscious buyers may find better performance-per-dollar elsewhere.</p>
+        <img src="images/Blade16_KV.jpg" alt="Razer Blade 16"
+            class="hero" onclick="openPopup(this.src)" />
+
+        <h2 id="verdict">Verdict: A Premium Thin-and-Light Champion</h2>
+        <p>The Razer Blade 16 (2025) with RTX 5090 is a triumph of engineering, cramming flagship performance into a
+            chassis thinner than many ultrabooks. Its OLED display, robust build, and impressive battery life make it a
+            versatile choice for gamers and creators who value portability without sacrificing power. The RTX 5090’s
+            DLSS 4 and 24GB VRAM ensure it’s ready for future titles, while the Ryzen AI 9 HX 370 handles most tasks
+            admirably.</p>
+        <p>However, the steep price, modest generational performance gains, and lack of a 4K or mini-LED display hold it
+            back from perfection. Thicker laptops like the Alienware Area-51 or MSI Titan 18 HX squeeze more raw power
+            from the RTX 5090, and cheaper RTX 5080 models offer nearly identical gaming performance. If you crave a
+            premium, portable gaming laptop that doubles as a workstation, the Blade 16 is among the best. But for pure
+            performance or value, alternatives may edge it out.</p>
+        <div class="verdict">
+            <strong>Pros:</strong>
+            <ul>
+                <li>Stunningly thin and light chassis (0.59-0.69 inches, 4.6 lbs).</li>
+                <li>RTX 5090 delivers top-tier gaming with DLSS 4 and 24GB VRAM.</li>
+                <li>Vibrant 240Hz QHD+ OLED display with accurate colors.</li>
+                <li>Improved battery life (8 hours light use).</li>
+                <li>Premium build quality and professional aesthetics.</li>
+                <li>Comprehensive port selection with SD card reader.</li>
+            </ul>
+            <strong>Cons:</strong>
+            <ul>
+                <li>High price ($4,499-$4,899) for marginal RTX 5090 gains.</li>
+                <li>No 4K or mini-LED display option.</li>
+                <li>Ryzen AI 9 HX 370 lags behind top HX CPUs.</li>
+                <li>OLED brightness and HDR performance are average.</li>
+                <li>Cooling pad needed for max TGP is loud.</li>
+            </ul>
+        </div>
+
+        <!-- botton review -->
+        <div class="bottom-review">
+            <div class="score-section">
+                <div class="score-box">8.7</div>
+                <div>
+                    <h3>Very Good</h3>
+                    <p>
+                        The Razer Blade 16 (2025) with RTX 5090 scores 8.7/10 for its slim 0.59-inch design, vibrant
+                        QHD+ OLED, and top-tier performance, ideal for portable gaming and creative work. Its RTX 5090
+                        with DLSS 4 and 8-hour battery life shine, but the $4,499-$4,899 price, 400-nit brightness, and
+                        minor CPU/thermal limits cap the score. It outranks the Alienware Area-51 (8.5/10) for
+                        portability and display but misses a 9.0 due to cost and lack of 4K/mini-LED.</p>
+                    <div class="reviewer">Tarr</div>
+                </div>
+            </div>
+            <img src="images/screen-2-1743126255145.jpg"
+                alt="Laptop Photo" onclick="openPopup(this.src)" />
+        </div>
+    </div>
+
+
+    <!-- Popup container -->
+    <div id="image-popup" class="popup">
+        <button class="close-btn" onclick="closePopup()">×</button>
+        <img id="popup-img" src="">
+    </div>
+
+    <!-- comment section -->
+    <div id="comment-section">
+        <h3>Comment Section</h3>
+        <textarea id="comment-input" placeholder="Write a comment..." onclick="checkLogin()"></textarea>
+        <button onclick="postComment()">Post</button>
+        <div id="comments-list"></div>
+    </div>
+
+    <!-- delete confirmation -->
+    <div id="custom-confirm" class="confirm-overlay" style="display:none;">
+        <div class="confirm-box">
+            <p id="confirm-message">Are you sure you want to delete this comment?</p>
+            <div class="confirm-actions">
+                <button id="confirm-yes">Yes</button>
+                <button id="confirm-no">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js" defer></script>
+</body>
+
+</html>

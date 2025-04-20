@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenovo Flex 5i Chromebook Plus Review</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+    <!-- Login -->
+    <div id="login-modal" class="login-popup">
+        <div class="login-content">
+            <span class="close-login" onclick="closeLoginPopup()">&times;</span>
+            <h4>Login Required</h4>
+            <input type="text" id="username" placeholder="Enter your username">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Side panel -->
+        <div class="side-panel" id="sidePanel">
+
+            <!-- show user name -->
+            <p id="user-display"><i class="fas fa-user"></i> <span id="username-text"></span></p>
+
+            <!-- Search Popup -->
+            <div id="search-modal" class="search-popup">
+                <div class="search-content">
+                    <span class="close-search" onclick="closeSearchPopup()">×</span>
+                    <h4>Search</h4>
+                    <input type="text" id="search-input" placeholder="Enter your search...">
+                    <button onclick="performSearch()">Search</button>
+                    <div id="search-results" class="search-results"></div>
+                </div>
+            </div>
+
+            <!-- separate line -->
+            <div class="separate1">
+            </div>
+
+            <div class="nav-links">
+                <a href="/index.html" class="active"><span>🏠</span>Home</a>
+                <a href="#search"><span>🔍</span>Search</a>
+                <a href="#overview">Overview</a>
+                <a href="#design">Look and Feel</a>
+                <a href="#display">Screen</a>
+                <a href="#performance">Performance</a>
+                <a href="#Keyboard and Trackpad">Keyboard and Trackpad</a>
+                <a href="#battery">Battery Life</a>
+                <a href="#Pricing and Availability">Pricing and Availability</a>
+                <a href="#Conclusion">Conclusion</a>
+            </div>
+
+            <div class="separate2">
+            </div>
+
+            <button class="toggle-light-mode">
+                <i class="fas fa-sun"></i>
+            </button>
+
+            <!-- login button -->
+            <button id="login-btn" onclick="checkLogin()">Login</button>
+
+            <!-- Add Logout button directly -->
+            <button id="logout-btn" onclick="logout()">Logout</button>
+
+            <!-- separate line -->
+            <div class="separate3">
+            </div>
+
+        </div>
+
+        <!-- 3-dot menu button -->
+        <button class="menu-toggle" onclick="toggleSidePanel()">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Content -->
+
+        <h1>Acer Swift Go 14 (2025): Affordable Powerhouse with Stunning OLED</h1>
+        <div class="meta">By Kavin | April 14, 2025</div>
+
+        <div class="separate-main">
+        </div>
+
+        <h2 id="overview">Overview</h2>
+        <p>The Acer Swift Go 14 (2025) emerges as a compelling option in the ultraportable laptop segment, targeting
+            budget-conscious users seeking a blend of performance, portability, and modern features. Given the current
+            date, April 18, 2025, and the lack of specific 2025 model reviews, this analysis is based on the 2024
+            model's specifications and reviews, with the assumption that the 2025 version represents a continuation or
+            minor update, particularly given Intel's processor timeline.</p>
+
+        <img src="images/UdGR3jQ2c3C7EivCaPLfMU-1920-80.jpg.webp" alt="Acer Swift Go 14" class="hero"
+            onclick="openPopup(this.src)" />
+
+        <h2 id="design">Design and Build Quality</h2>
+        <p>The Swift Go 14 (2025) features a sleek, silver aluminum chassis with a premium laser-etched cover, weighing
+            1.3 kg, which enhances portability for travel or daily commutes. The 180° lie-flat hinge allows for flexible
+            usage, such as sharing screens or using it in tablet mode, which is particularly useful for collaborative
+            settings. Reviews of the 2024 model, such as from Laptop Mag (Laptop Mag Review), praise the reflective
+            sheen and minimalist lid design, though some note it lacks the premium feel of competitors like the MacBook
+            Air or Dell XPS 13. The high-precision multi-control touchpad supports gestures for media control, enhancing
+            user interaction.</p>
+        <img src="images/6-12-1536x864.jpg" alt="Acer Swift Go 14" class="hero" onclick="openPopup(this.src)" />
+        <table>
+            <img src="images/9-11-1536x864.jpg" alt="Acer Swift Go 14" class="hero" onclick="openPopup(this.src)" />
+            <tr>
+                <th>Feature</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Weight</td>
+                <td>1.3 kg</td>
+            </tr>
+            <tr>
+                <td>Hinge</td>
+                <td>180° lie-flat hinge</td>
+            </tr>
+            <tr>
+                <td>Cover</td>
+                <td>Premium laser-etched cover</td>
+            </tr>
+            <tr>
+                <td>Build Quality</td>
+                <td>Sturdy, mid-tier compared to premium models</td>
+            </tr>
+        </table>
+
+        <p>While functional, the build quality is described as mid-tier, with some reviews mentioning a plastic
+            undercarriage in certain configurations, which may affect perceived durability.</p>
+
+        <h2 id="display">Display Options</h2>
+        <img src="images/7-11-680x383.jpg" alt="Acer Swift Go 14" class="hero" onclick="openPopup(this.src)" />
+
+        <div class="Benchmarks">
+            <ul>
+                <li><b>2K Touch IPS:</b> Suitable for users who prefer touch functionality, offering good brightness for
+                    indoor use.</li>
+                <li><b>3K OLED (100% DCI-P3, DisplayHDR True Black 500, Eyesafe 2.0):</b> Provides vibrant visuals with
+                    excellent color accuracy and contrast, ideal for media consumption and content creation.</li>
+                <li><b>2K OLED (100% DCI-P3, DisplayHDR True Black 500, Eyesafe 2.0):</b> A slightly lower resolution
+                    but still offers exceptional picture quality, with certifications ensuring eye comfort during
+                    extended use.</li>
+            </ul>
+        </div>
+
+        <table>
+            <tr>
+                <th>Display Type</th>
+                <th>Resolution</th>
+                <th>Color Gamut</th>
+                <th>Additional Features</th>
+            </tr>
+            <tr>
+                <td>2K Touch IPS</td>
+                <td>1920x1200</td>
+                <td>Not specified</td>
+                <td>Touch-enabled</td>
+            </tr>
+            <tr>
+                <td>3K OLED</td>
+                <td>2880x1800</td>
+                <td>100% DCI-P3</td>
+                <td>DisplayHDR True Black 500, Eyesafe 2.0</td>
+            </tr>
+            <tr>
+                <td>2K OLED</td>
+                <td>2560x1600</td>
+                <td>100% DCI-P3</td>
+                <td>DisplayHDR True Black 500, Eyesafe 2.0</td>
+            </tr>
+        </table>
+
+        <h2 id="performance">Performance and AI Capabilities</h2>
+        <p>The Swift Go 14 (2025) is powered by up to an Intel Core Ultra 9 (Series 2) processor, part of Intel's Meteor
+            Lake architecture, with Intel Arc graphics. This configuration delivers excellent performance for
+            productivity tasks, light gaming, and content creation, with up to 99 TOPS of total on-device AI
+            performance. Reviews from PCMag (PCMag Review) highlight the graphics performance, particularly with Intel
+            Arc, though some note fan noise under load, which could be a consideration for quiet environments.</p>
+        <img src="images/Acer-Swift-Go-14-AI-Gen-2-SFG14-73-KSP-3-1536x864.webp" alt="Acer Swift Go 14" class="hero"
+            onclick="openPopup(this.src)" />
+        <p>The AI capabilities enhance efficiency in applications like video editing and photo manipulation, supported
+            by features like Copilot, AcerSense™, and Acer PurifiedView™ 2.0, which improve video calls with supersharp
+            resolution and background blur. RTINGS.com (RTINGS.com Review) conducted benchmarks in Performance mode,
+            suggesting robust handling of productivity and gaming tasks, though dedicated GPU options are absent.</p>
+
+        <table>
+            <tr>
+                <th>Processor</th>
+                <th>Max AI Performance</th>
+                <th>Graphics</th>
+            <tr>
+                <td>Up to Intel Core Ultra 9</td>
+                <td>Up to 99 TOPS</td>
+                <td>Intel Arc Graphics</td>
+            </tr>
+        </table>
+
+        <p>Memory options go up to 32 GB LPDDR5X, ensuring smooth multitasking, and storage can reach 2TB, as noted in
+            2024 reviews, though specific 2025 configurations may vary by region.</p>
+
+        <h2 id="Keyboard and Trackpad">Keyboard and Trackpad</h2>
+        <p>The keyboard has seen improvements, offering a comfortable typing experience with good key travel, as per
+            Laptop Mag reviews. The high-precision multi-control touchpad supports gestures, enhancing navigation and
+            media control, which is particularly useful for productivity tasks.</p>
+        <img src="images/3-14-1536x864.jpg" alt="Acer Swift Go 14" class="hero" onclick="openPopup(this.src)" />
+
+        <h2 id="battery">Battery Life and Charging</h2>
+        <img src="images/10-8.jpg" alt="Acer Swift Go 14" class="hero"
+            onclick="openPopup(this.src)" />
+        <p>While specific battery life details for 2025 are not provided, the 2024 model was noted for all-day battery
+            life, likely carrying over due to similar hardware. The inclusion of fast-charging via USB-C ports, as
+            mentioned in Acer's specs, ensures quick top-ups, making it convenient for on-the-go use.</p>
+
+        <h2 id="Pricing and Availability">Pricing and Availability</h2>
+        <p>While specific pricing for 2025 is not detailed, the 2024 model started at around $800, with higher
+            configurations reaching $1,100, as noted in reviews like PCMag. Availability may vary by region, with all
+            models subject to stock, as per Acer's notes.</p>
+        <img src="images/8-11.jpg" alt="Acer Swift Go 14"
+            class="hero" onclick="openPopup(this.src)" />
+
+        <h2 id="Conclusion">Conclusion</h2>
+        <p>The Acer Swift Go 14 (2025) appears to be an excellent choice for users seeking a balance of performance,
+            portability, and affordability. With its latest Intel Core Ultra processors, AI capabilities, and versatile
+            display options, it caters well to students, professionals, and casual users. While it may not match the
+            build quality or audio performance of premium laptops like the MacBook Air or Dell XPS 13, its value
+            proposition makes it a compelling option in its price range. If you prioritize function over form and need a
+            reliable, lightweight laptop for everyday tasks, the Acer Swift Go 14 is worth considering.</p>
+
+        <div class="Conclusion">
+            <strong>Pros:</strong>
+            <ul>
+                <li>Excellent performance with Intel Core Ultra processors and AI capabilities.</li>
+                <li>Vibrant display options, including OLED, offering excellent color accuracy and contrast.</li>
+                <li>Lightweight and portable design, ideal for travel and daily use.</li>
+                <li>Comprehensive connectivity options with a wide range of ports.</li>
+                <li>Advanced AI features for enhanced productivity and creativity.</li>
+                <li>Good battery life for all-day use.</li>
+            </ul>
+            <strong>Cons:</strong>
+            <ul>
+                <li>Some reviews mention noticeable fan noise under heavy workloads, which could affect quiet
+                    environments.</li>
+                <li>Speakers may not be as powerful as those in higher-end models, limiting audio quality for media
+                    consumption.</li>
+                <li>Build quality is mid-tier compared to premium ultrabooks, potentially affecting long-term
+                    durability.</li>
+            </ul>
+        </div>
+
+        <!-- botton review -->
+        <div class="bottom-review">
+            <div class="score-section">
+                <div class="score-box">8</div>
+                <div>
+                    <h3>Good</h3>
+                    <p>The Acer Swift Go 14 (2025) is a compelling ultraportable laptop that offers strong performance
+                        with Intel Core Ultra processors, vibrant OLED display options, and robust connectivity at a
+                        budget-friendly price. Its lightweight design and AI-enhanced features make it ideal for
+                        students and professionals, though fan noise and mid-tier build quality are minor drawbacks. For
+                        those prioritizing value and versatility, it’s a highly recommended choice.</p>
+                    <div class="reviewer">Kavin</div>
+                </div>
+            </div>
+            <img src="images/1-swift-go-1720755669705735455377.webp"
+                alt="Laptop Photo" onclick="openPopup(this.src)" />
+        </div>
+    </div>
+
+
+    <!-- Popup container -->
+    <div id="image-popup" class="popup">
+        <button class="close-btn" onclick="closePopup()">×</button>
+        <img id="popup-img" src="">
+    </div>
+
+    <!-- comment section -->
+    <div id="comment-section">
+        <h3>Comment Section</h3>
+        <textarea id="comment-input" placeholder="Write a comment..." onclick="checkLogin()"></textarea>
+        <button onclick="postComment()">Post</button>
+        <div id="comments-list"></div>
+    </div>
+
+    <!-- delete confirmation -->
+    <div id="custom-confirm" class="confirm-overlay" style="display:none;">
+        <div class="confirm-box">
+            <p id="confirm-message">Are you sure you want to delete this comment?</p>
+            <div class="confirm-actions">
+                <button id="confirm-yes">Yes</button>
+                <button id="confirm-no">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js" defer></script>
+</body>
+
+</html>

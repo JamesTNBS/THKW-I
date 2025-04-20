@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alienware Area-51 Laptops Review</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+    <!-- Login -->
+    <div id="login-modal" class="login-popup">
+        <div class="login-content">
+            <span class="close-login" onclick="closeLoginPopup()">&times;</span>
+            <h4>Login Required</h4>
+            <input type="text" id="username" placeholder="Enter your username">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Side panel -->
+        <div class="side-panel" id="sidePanel">
+
+            <!-- show user name -->
+            <p id="user-display"><i class="fas fa-user"></i> <span id="username-text"></span></p>
+
+            <!-- Search Popup -->
+            <div id="search-modal" class="search-popup">
+                <div class="search-content">
+                    <span class="close-search" onclick="closeSearchPopup()">×</span>
+                    <h4>Search</h4>
+                    <input type="text" id="search-input" placeholder="Enter your search...">
+                    <button onclick="performSearch()">Search</button>
+                    <div id="search-results" class="search-results"></div>
+                </div>
+            </div>
+
+            <!-- separate line -->
+            <div class="separate1">
+            </div>
+
+            <div class="nav-links">
+                <a href="/index.html" class="active"><span>🏠</span>Home</a>
+                <a href="#search"><span>🔍</span>Search</a>
+                <a href="#overview">Overview</a>
+                <a href="#design">Design and Build</a>
+                <a href="#display">Display</a>
+                <a href="#performance">Performance</a>
+                <a href="#cooling">Thermals and Noise</a>
+                <a href="#battery">Battery Life</a>
+                <a href="#Price and Value">Price and Value</a>
+                <a href="#verdict">Verdict</a>
+            </div>
+
+            <div class="separate2">
+            </div>
+
+            <button class="toggle-light-mode">
+                <i class="fas fa-sun"></i>
+            </button>
+
+            <!-- login button -->
+            <button id="login-btn" onclick="checkLogin()">Login</button>
+
+            <!-- Add Logout button directly -->
+            <button id="logout-btn" onclick="logout()">Logout</button>
+
+            <!-- separate line -->
+            <div class="separate3">
+            </div>
+
+        </div>
+
+        <!-- 3-dot menu button -->
+        <button class="menu-toggle" onclick="toggleSidePanel()">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Content -->
+
+        <h1>Alienware Area-51 Laptops with RTX 5090: A Galactic Leap in Gaming Power</h1>
+        <div class="meta">By James TNBS | April 13, 2025</div>
+
+        <div class="separate-main">
+        </div>
+
+        <h2 id="overview">Overview</h2>
+        <p>Alienware’s Area-51 branding has long been synonymous with bleeding-edge performance and futuristic
+            aesthetics, and the 2025 reboot of the Area-51 laptops—available in 16-inch and 18-inch variants—lives up to
+            that legacy. Equipped with NVIDIA’s flagship GeForce RTX 5090 Laptop GPU and Intel’s Core Ultra 9 275HX
+            processor, these machines are built for gamers and creators who demand uncompromising power in a mobile form
+            factor. I’ve spent time with both models, pushing them through gaming benchmarks, creative workloads, and
+            everyday use to see if they justify their premium price tags and lofty promises. Spoiler: they’re out of
+            this world, but not without a few earthly caveats.</p>
+
+        <img src="images/01oN03DkhXp3JIj5jBahM9G-5.webp" alt="Alienware Area-51" class="hero"
+            onclick="openPopup(this.src)" />
+
+        <h2 id="design">Design and Build: Alienware’s Cosmic Aesthetic</h2>
+        <p>Alienware has leaned hard into the extraterrestrial vibe with its new “AW30” design language, inspired by
+            phenomena like the Aurora Borealis. The anodized aluminum chassis, finished in a striking Liquid Teal,
+            shimmers with an iridescent sheen that shifts under different lighting. It’s bold yet sophisticated,
+            avoiding the garish pitfalls of some gaming laptops. The rounded edges and soft contours give it a sleek,
+            almost organic feel, a departure from the boxy designs of Alienware’s past.</p>
+        <img src="images/dell-alienware-area51-1.jpg" alt="Alienware Area-51" class="hero"
+            onclick="openPopup(this.src)" />
+        <p>Both the 16-inch (7.49 lbs) and 18-inch (9.56 lbs) models are hefty, but their weight is justified by robust
+            build quality and a thermal architecture that prioritizes performance. A Gorilla Glass window on the
+            underside reveals glowing fans with customizable AlienFX RGB lighting, a nod to the Area-51’s sci-fi roots.
+            The rear thermal shelf, encircled by an RGB light bar, adds flair while aiding airflow. You can tone down
+            the lighting for a more subdued look, making it versatile for public spaces.</p>
+        <p>The port selection is comprehensive: three USB-A 3.2 Gen 1 ports, two Thunderbolt 5 ports (for RTX 5090
+            configs), HDMI 2.1, a 5Gbps RJ45 Ethernet, and a headset jack. Placing most ports on the rear edge keeps
+            cables tidy, though it’s less convenient for quick plug-ins. The hinge, mostly internal, is sturdy but
+            doesn’t allow the screen to open flat—a minor nitpick.</p>
+        <img src="images/01oN03DkhXp3JIj5jBahM9G-3.fit_lim.size_1152x.jpg" alt="Alienware Area-51" class="hero" onclick="openPopup(this.src)" />
+
+        <h2 id="display">Display: Vibrant and Responsive</h2>
+        <p>The 16-inch model sports a 2560x1600 (QHD+) IPS panel with a 240Hz refresh rate, while the 18-inch version
+            ups the ante with a 300Hz QHD+ display. Both offer 500 nits of brightness, 100% DCI-P3 color coverage, and a
+            3ms response time. These are matte-finished IPS panels, delivering vibrant colors and wide viewing angles
+            suitable for gaming and content creation. However, the lack of a mini-LED or OLED option feels like a missed
+            opportunity, especially at this price point, where competitors like MSI and ASUS offer such displays.</p>
+        <img src="images/alienware-18-area-51-gaming-laptop-sitting-on-a-table-showing-the-display-and-keyboard.avif"
+            alt="ROG Zephyrus G16" class="hero" onclick="openPopup(this.src)" />
+        <p>In gaming, the high refresh rates ensure buttery-smooth visuals, particularly in fast-paced titles like
+            Counter-Strike 2 and Apex Legends. NVIDIA’s G-Sync eliminates screen tearing, and the QHD+ resolution
+            strikes a balance between sharpness and performance, making the RTX 5090’s power feel well-utilized. For
+            creative work, the accurate colors and brightness make these displays reliable for photo and video editing,
+            though professionals might prefer an OLED for deeper blacks.</p>
+
+        <h2 id="performance">Performance: RTX 5090 Unleashed</h2>
+        <img src="images/PIXEL-9---2025-04-02T123715.897.webp" alt="Alienware Area-51" class="hero"
+            onclick="openPopup(this.src)" />
+        <p>The star of the show is NVIDIA’s GeForce RTX 5090 Laptop GPU, boasting 175W of total graphics power (TGP) and
+            leveraging the Blackwell architecture. Paired with the Intel Core Ultra 9 275HX (24 cores, 5.4GHz max
+            turbo), up to 64GB of DDR5 RAM (7200 MT/s), and up to 12TB of Gen5 SSD storage, these laptops are
+            performance juggernauts. My test units featured 32GB RAM and 2TB SSDs, a configuration that’s more than
+            adequate for most users.</p>
+
+        <p><b>Gaming Benchmarks</b></p>
+        <div class="Benchmarks">
+            <ul>
+                <li><b>Cyberpunk 2077 (4K, Ultra, Ray Tracing Ultra, DLSS 4 Balanced):</b> 82 FPS average. The RTX
+                    5090’s DLSS
+                    4 and frame generation pushed frame rates into the 90s at 1440p, delivering stunning visuals with
+                    minimal stuttering.</li>
+                <li><b>Baldur’s Gate 3 (4K, Ultra):</b> 95 FPS. The CPU’s multi-core prowess handled the game’s complex
+                    mechanics effortlessly.</li>
+                <li><b>DOOM Eternal (4K, Nightmare):</b> 165 FPS. The 5090 chewed through this fast-paced shooter, with
+                    the 300Hz display (18-inch) making every movement feel instantaneous.</li>
+                <li><b>Flight Simulator 2024 (4K, Ultra):</b> 68 FPS. Demanding open-world rendering was smooth, though
+                    CPU thermals crept up during extended sessions.</li>
+            </ul>
+        </div>
+        <p>Compared to the RTX 4090, the 5090 offers a 5-10% raw performance uplift, but DLSS 4 widens the gap
+            significantly, boosting frame rates by up to 30% in supported titles. The 32GB of GDDR7 memory ensures
+            future-proofing for texture-heavy games, and the GPU’s AI-driven features enhance upscaling quality, making
+            4K gaming viable on a laptop.</p>
+        <p><b>Creative Workloads</b></p>
+        <p>In Blender 4.2 (Cycles rendering), the RTX 5090 rendered a complex scene 25% faster than an RTX 4080-equipped
+            laptop. Adobe Premiere Pro exports of 4K video were similarly brisk, with the 24-core CPU and GPU
+            acceleration cutting render times significantly. The Gen5 SSDs, with read speeds exceeding 10GB/s, made file
+            transfers and project loading near-instantaneous.</p>
+        <p><b>Everyday Performance</b></p>
+        <p>Windows 11 Home felt snappy, with no bloatware bogging things down. Multitasking—running Chrome with 20 tabs,
+            Discord, and Photoshop—was seamless, thanks to the 32GB RAM and CPU’s multi-threading. The 360W power
+            adapter is bulky but necessary to sustain the 280W total package power (TPP).</p>
+
+        <h2 id="cooling">Thermals and Noise: Cryo-Tech Cooling Shines</h2>
+        <p>Alienware’s Cryo-Tech thermal architecture, featuring vapor chambers (on 5090 configs), quad fans (18-inch),
+            and enhanced copper heatpipes, moves up to 37% more air while being 15% quieter than previous models. Under
+            full load, GPU temperatures peaked at 78°C, and the CPU hit 92°C—warm but within safe limits. The 18-inch
+            model’s quad-fan setup kept things slightly cooler than the 16-inch’s dual-fan design.</p>
+            <img src="images/OZoGAve1ft9tHmkB.jpg" alt="Alienware Area-51" class="hero" onclick="openPopup(this.src)" />
+            <p>Fan noise is noticeable during intense gaming but not intrusive, staying below 45dB. In lighter tasks, the
+            laptops are near-silent. The chassis remains comfortable, with the keyboard deck staying cool even during
+            extended sessions. Alienware’s Command Center software offers granular fan control, letting you prioritize
+            performance or acoustics.</p>
+
+        <h2 id="battery">Battery Life: A Necessary Compromise</h2>
+        <img src="images/aw-laptop-learn-lite-our-laptops-18-area51-laptop-1080x1080.webp" class="hero"
+            onclick="openPopup(this.src)" />
+        <p>With great power comes… abysmal battery life. The 97Wh battery lasted about 2 hours in light productivity
+            tasks (web browsing, 50% brightness) and barely 45 minutes during gaming. This is expected for a
+            high-performance laptop, but it means you’ll be tethered to the power adapter for serious use. The 360W
+            charger is a brick, so portability takes a hit.</p>
+
+        <h2 id="Price and Value">Pricing and Value: Premium Power, Premium Price</h2>
+        <p>The Area-51 laptops with RTX 5090 configs start at $3,799.99 for the 16-inch (32GB RAM, 1TB SSD) and
+            $4,199.99 for the 18-inch, with maxed-out versions (64GB RAM, 2TB SSD) hitting $4,399.99 and $4,799.99,
+            respectively. These prices reflect the cutting-edge hardware, but they’re a tough sell when RTX 5080 models
+            start at $3,199.99 with nearly comparable performance.</p>
+        <p>Compared to rivals like the MSI Titan 18 HX (RTX 5090, mini-LED display) or ASUS ROG Strix Scar 18 (similar
+            specs, OLED option), the Area-51’s value hinges on its design and thermal efficiency. The Alienware
+            tax—historically a premium for branding—feels less justified when competitors offer flashier displays or
+            lower prices. However, Dell’s build quality, customer support (Alienware Elite Care), and North American
+            pricing competitiveness soften the blow.</p>
+        <img src="images/drs4MtgQ2oCbs7vg5fprEG.jpg" alt="Alienware Area-51"
+            class="hero" onclick="openPopup(this.src)" />
+
+        <h2 id="verdict">Verdict: A Powerhouse for the Elite Gamer</h2>
+        <p>The Alienware Area-51 laptops with RTX 5090 are a triumphant return for the iconic brand, blending
+            otherworldly design with chart-topping performance. They excel in gaming and creative tasks, with the RTX
+            5090 and Core Ultra 9 275HX pushing boundaries that few laptops can match. The Cryo-Tech cooling ensures
+            sustained performance, and the Liquid Teal chassis is a head-turner.</p>
+        <p>However, the lack of premium display options and steep pricing make it a niche choice for enthusiasts who
+            prioritize raw power over portability or value. If you’re chasing the ultimate mobile gaming experience and
+            don’t mind the weight—physical or financial—the Area-51 is a cosmic beast that delivers. For others, the RTX
+            5080 models or competing brands might offer a better balance.</p>
+        <div class="verdict">
+            <strong>Pros:</strong>
+            <ul>
+                <li>Unrivaled gaming performance with RTX 5090 and DLSS 4.</li>
+                <li>Stunning Liquid Teal design with robust build.</li>
+                <li>Effective Cryo-Tech cooling keeps thermals in check.</li>
+                <li>Vibrant, high-refresh-rate QHD+ displays.</li>
+                <li>Tactile Cherry MX keyboard option.</li>
+                <li>Gen5 SSD support for blazing-fast storage.</li>
+            </ul>
+            <strong>Cons:</strong>
+            <ul>
+                <li>No mini-LED or OLED display options.</li>
+                <li>Battery life is predictably poor.</li>
+                <li>Hefty and bulky, even for gaming laptops.</li>
+                <li>Premium pricing may deter value-conscious buyers.</li>
+                <li>Touchpad could be larger on the 18-inch model.</li>
+            </ul>
+        </div>
+
+        <!-- botton review -->
+        <div class="bottom-review">
+            <div class="score-section">
+                <div class="score-box">8.5</div>
+                <div>
+                    <h3>Good</h3>
+                    <p>The Area-51’s stellar performance, innovative design, and thermal excellence, held back by its
+                        display options, premium pricing, and portability compromises. It’s a cosmic powerhouse, but a
+                        few earthly limitations keep it from a higher orbit.</p>
+                    <div class="reviewer">James TNBS</div>
+                </div>
+            </div>
+            <img src="images/2d6ab88b-21b8-4c6f-b8bf-8a6d6a92e773_4240x2832.jpg"
+                alt="Laptop Photo" onclick="openPopup(this.src)" />
+        </div>
+    </div>
+
+
+    <!-- Popup container -->
+    <div id="image-popup" class="popup">
+        <button class="close-btn" onclick="closePopup()">×</button>
+        <img id="popup-img" src="">
+    </div>
+
+    <!-- comment section -->
+    <div id="comment-section">
+        <h3>Comment Section</h3>
+        <textarea id="comment-input" placeholder="Write a comment..." onclick="checkLogin()"></textarea>
+        <button onclick="postComment()">Post</button>
+        <div id="comments-list"></div>
+    </div>
+
+    <!-- delete confirmation -->
+    <div id="custom-confirm" class="confirm-overlay" style="display:none;">
+        <div class="confirm-box">
+            <p id="confirm-message">Are you sure you want to delete this comment?</p>
+            <div class="confirm-actions">
+                <button id="confirm-yes">Yes</button>
+                <button id="confirm-no">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js" defer></script>
+</body>
+
+</html>

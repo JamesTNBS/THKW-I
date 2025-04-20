@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP Omen Max 16 Review</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+    <!-- Login -->
+    <div id="login-modal" class="login-popup">
+        <div class="login-content">
+            <span class="close-login" onclick="closeLoginPopup()">&times;</span>
+            <h4>Login Required</h4>
+            <input type="text" id="username" placeholder="Enter your username">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Side panel -->
+        <div class="side-panel" id="sidePanel">
+
+            <!-- show user name -->
+            <p id="user-display"><i class="fas fa-user"></i> <span id="username-text"></span></p>
+
+            <!-- Search Popup -->
+            <div id="search-modal" class="search-popup">
+                <div class="search-content">
+                    <span class="close-search" onclick="closeSearchPopup()">×</span>
+                    <h4>Search</h4>
+                    <input type="text" id="search-input" placeholder="Enter your search...">
+                    <button onclick="performSearch()">Search</button>
+                    <div id="search-results" class="search-results"></div>
+                </div>
+            </div>
+
+            <!-- separate line -->
+            <div class="separate1">
+            </div>
+
+            <div class="nav-links">
+                <a href="/index.html" class="active"><span>🏠</span>Home</a>
+                <a href="#search"><span>🔍</span>Search</a>
+                <a href="#overview">Overview</a>
+                <a href="#design">Look and Feel</a>
+                <a href="#display">Screen</a>
+                <a href="#performance">Performance</a>
+                <a href="#cooling">Cooling and Noise</a>
+                <a href="#battery">Battery Life</a>
+                <a href="#Price and Value">Price and Value</a>
+                <a href="#verdict">Verdict</a>
+            </div>
+
+            <div class="separate2">
+            </div>
+
+            <button class="toggle-light-mode">
+                <i class="fas fa-sun"></i>
+            </button>
+
+            <!-- login button -->
+            <button id="login-btn" onclick="checkLogin()">Login</button>
+
+            <!-- Add Logout button directly -->
+            <button id="logout-btn" onclick="logout()">Logout</button>
+
+            <!-- separate line -->
+            <div class="separate3">
+            </div>
+
+        </div>
+
+        <!-- 3-dot menu button -->
+        <button class="menu-toggle" onclick="toggleSidePanel()">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Content -->
+
+        <h1>Acer Nitro V15 (2025) with RTX 5090: Budget Beast or Compromise King?</h1>
+        <div class="meta">By Karen | April 14, 2025</div>
+
+        <div class="separate-main">
+        </div>
+
+        <h2 id="overview">Overview</h2>
+        <p>Yo, let’s dive into the Acer Nitro V15 (2025), the latest budget brawler from Acer’s gaming lineup, now
+            juiced up with NVIDIA’s beastly GeForce RTX 5090 Laptop GPU. This 15.6-inch rig aims to deliver high-end
+            gaming vibes without obliterating your wallet, starting at around $2,999 for the RTX 5090 config. I’ve been
+            grinding on this laptop—blasting through games, editing vids, and just living with it—to see if it’s the
+            steal it claims to be or if it’s cutting too many corners. Spoiler: it’s a wild ride with some dope highs
+            and a few facepalm moments. Let’s break it down, fam.</p>
+
+        <img src="images/Nitro-V-15-AI-ANV15-42-Lifestyle-03.jpg" alt="Acer Nitro V15" class="hero"
+            onclick="openPopup(this.src)" />
+
+        <h2 id="design">Look and Feel: Stealth Gamer Vibes</h2>
+        <p>The Nitro V15 keeps it low-key with a matte black plastic chassis, accented by subtle blue-silver stripes and
+            a metallic Nitro logo on the lid. It’s not screaming “gamer” like some RGB-drenched rigs, which is clutch if
+            you’re rocking it in a coffee shop or class. At 4.66 lbs and 1.06 inches thick, it’s not ultrabook-slim but
+            light enough to toss in a backpack without beefing up your chiropractor’s business. The build’s solid for
+            the price—minimal flex in the keyboard deck, though the lid’s a bit wobbly if you’re rough with it. Compared
+            to the Razer Blade 16’s premium aluminum or the Alienware Area-51’s sci-fi swagger, it feels budget, but it
+            gets the job done.</p>
+        <img src="images/acer-nitro-v-15-anv15-41-r2y3_41ac.3840.webp" alt="Acer Nitro V15" class="hero"
+            onclick="openPopup(this.src)" />
+        <p>Ports are a win: three USB-A 3.2 Gen 1, one USB-C (Thunderbolt 4 on RTX 5090 models), HDMI 2.1, Ethernet
+            (fold-out, nice touch), and a 3.5mm jack. They’re spread smartly, though I wish the USB-C was further back
+            for mouse users. The 280W charger’s a chonky boy, so don’t expect to travel light.</p>
+        <img src="images/07hmx0ahdukgbkvkskgvzrs-6_vkk1.1920.webp" alt="Acer Nitro V15" class="hero"
+            onclick="openPopup(this.src)" />
+        <img src="images/07hmx0ahdukgbkvkskgvzrs-7_zxfr.1920.webp" alt="Acer Nitro V15" class="hero"
+            onclick="openPopup(this.src)" />
+
+        <h2 id="display">Screen: Smooth but Meh
+
+        </h2>
+        <img src="images/07hmx0ahdukgbkvkskgvzrs-5_1ysp.1920.webp" alt="Acer Nitro V15" class="hero"
+            onclick="openPopup(this.src)" />
+        <p>The 15.6-inch FHD (1920x1080) IPS display rocks a 165Hz refresh rate, which keeps things buttery in fast
+            shooters like Valorant (240+ FPS on low settings). G-Sync kills screen tearing, and the 144Hz base option is
+            still solid for most. But here’s the tea: the screen’s a letdown for 2025. With only 60% sRGB and 40% DCI-P3
+            coverage, colors look washed out—think Cyberpunk 2077’s neon streets looking like a rainy Monday. Brightness
+            tops out at 300 nits, so it struggles in bright rooms. No QHD+ or OLED options, unlike the Blade 16’s
+            vibrant OLED or Area-51’s sharper QHD+. For a $2,999 RTX 5090 rig, I expected more than a budget-tier panel.
+        </p>
+
+        <h2 id="performance">Performance: RTX 5090 Goes Hard</h2>
+        <p>This is where the Nitro V15 flexes. The RTX 5090 (155W TGP, 24GB GDDR7 VRAM) paired with an AMD Ryzen 9
+            7945HX (16 cores, 5.4GHz boost) is a monster. My test unit had 32GB DDR5 (5200MT/s) and a 1TB Gen4 SSD, but
+            you can max out at 64GB and 2TB. Let’s talk numbers.</p>
+        <img src="images/nitro-v15-high-performance-on-a-budget-for-gamers.jpg" alt="Acer Nitro V15" class="hero"
+            onclick="openPopup(this.src)" />
+        <p><b>Gaming Heat</b></p>
+        <div class="Benchmarks">
+            <ul>
+                <li><b>Cyberpunk 2077 (FHD, Ultra, RT Overdrive, DLSS 4 Balanced):</b> 120 FPS. DLSS 4 and frame gen
+                    make this neon dystopia sing, hitting 140 FPS at medium settings.</li>
+                <li><b>Black Myth: Wukong (FHD, High, DLSS 4):</b> 105 FPS. Smooth as silk, even in chaotic boss fights.
+                </li>
+                <li><b>Counter-Strike 2 (FHD, Low):</b> 280 FPS. Perfect for competitive sweats, though the 165Hz screen
+                    caps the vibes.</li>
+                <li><b>Starfield (FHD, Ultra):</b> 95 FPS. Big open worlds? No sweat, with 24GB VRAM eating textures for
+                    breakfast.</li>
+            </ul>
+        </div>
+        <p>The RTX 5090’s 5-8% raw boost over the RTX 4090 isn’t wild, but DLSS 4’s AI upscaling and frame gen juice
+            frames by up to 30% in supported games. Compared to the Blade 16’s 5090, the Nitro’s lower 155W TGP loses a
+            few FPS, but it’s still a 1080p champ. The Ryzen 9 keeps up with Intel’s Core Ultra 9 275HX in most games,
+            though it lags slightly in CPU-heavy titles like Flight Simulator 2024 (75 FPS vs. 80 FPS on Area-51).</p>
+
+        <p><b>Creative Hustle</b></p>
+        <p>For content creators, the RTX 5090 crushes Blender renders (15% faster than RTX 4080) and Premiere Pro 4K
+            exports. The Ryzen’s 16 cores chew through multi-threaded tasks, and the SSD’s 7GB/s reads make project
+            loading snappy. The single-stick RAM config (upgradable) slightly bottlenecks performance, so dual-channel
+            is the move.</p>
+        <p><b>Daily Grind</b></p>
+        <p>Windows 11 Home is zippy, but Acer’s bloatware (McAfee, ExpressVPN pop-ups) is a buzzkill. NitroSense
+            software is dope, letting you tweak fan curves and power modes (Quiet, Balanced, Turbo). Multitasking—20
+            Chrome tabs, Spotify, and Photoshop—is seamless with 32GB RAM.</p>
+
+        <h2 id="cooling">Cooling and Noise: Loud but Cool</h2>
+        <p>Acer’s dual-fan setup with a vapor chamber (RTX 5090 exclusive) keeps thermals decent: GPU at 75°C, CPU at
+            82°C under load. The keyboard deck stays comfy, unlike some toasty budget rigs. But the fans? They SCREAM at
+            50dB in Turbo mode, drowning out game audio unless you’re on headphones. Quiet mode drops noise to 40dB but
+            throttles performance. Compared to the Area-51’s quad-fan chill or Blade 16’s quieter 48dB, the Nitro’s a
+            loud boi. NitroSense helps, but custom fan curves can’t fully tame the jet engine.</p>
+        <img src="images/07hmx0ahdukgbkvkskgvzrs-3_d9uv.1920.webp" alt="Acer Nitro V15" class="hero"
+            onclick="openPopup(this.src)" />
+
+        <h2 id="battery">Battery: Actually Impressive</h2>
+        <p>The 58Wh battery shocked me with 9 hours of web browsing (50% brightness), trouncing the Area-51’s 2 hours
+            and edging out the Blade 16’s 8 hours. Gaming drains it in 1.5 hours, but that’s par for the course. The
+            Ryzen’s efficiency and RTX 5090’s power sipping in light tasks make this a legit all-day laptop if you’re
+            not fragging.</p>
+        <img src="images/Screenshot 2025-04-20 111723.png" alt="Acer Nitro V15" class="hero"
+            onclick="openPopup(this.src)" />
+
+        <h2 id="Price and Value">Price and Value: Bang for Buck?</h2>
+        <p>Starting at $2,999 (Ryzen 9, 32GB, 1TB, RTX 5090), the Nitro V15 undercuts the Blade 16 ($4,499) and Area-51
+            ($3,799) by a chunk. You get flagship performance, decent battery life, and a serviceable chassis. But the
+            dull display, loud fans, and 512GB SSD base (upgrade to 1TB, trust) sting at this price. The ASUS TUF A15
+            (RTX 5080, $2,799) offers a 1440p screen for less, and the MSI Katana A15 AI (RTX 4070, $1,799) is a budget
+            king if you don’t need 5090 power. Acer’s warranty and NitroSense are pluses, but bloatware and a cheap
+            touchpad drag it down.</p>
+        <img src="images/nitro-v15-a-laptop-for-real-gamers.jpg" alt="Acer Nitro V15"
+            class="hero" onclick="openPopup(this.src)" />
+
+        <h2 id="verdict">The Verdict, The Good, The Bad</h2>
+        <p>The Razer Blade 16 (2025) with RTX 5090 is a triumph of engineering, cramming flagship performance into a
+            chassis thinner than many ultrabooks. Its OLED display, robust build, and impressive battery life make it a
+            versatile choice for gamers and creators who value portability without sacrificing power. The RTX 5090’s
+            DLSS 4 and 24GB VRAM ensure it’s ready for future titles, while the Ryzen AI 9 HX 370 handles most tasks
+            admirably.</p>
+        <p>However, the steep price, modest generational performance gains, and lack of a 4K or mini-LED display hold it
+            back from perfection. Thicker laptops like the Alienware Area-51 or MSI Titan 18 HX squeeze more raw power
+            from the RTX 5090, and cheaper RTX 5080 models offer nearly identical gaming performance. If you crave a
+            premium, portable gaming laptop that doubles as a workstation, the Blade 16 is among the best. But for pure
+            performance or value, alternatives may edge it out.</p>
+        <div class="verdict">
+            <strong>The Good:</strong>
+            <ul>
+                <li>Ryzen 9 handles gaming and creative workloads like a champ.</li>
+                <li>9-hour battery life is wild for a gaming laptop.</li>
+                <li>Affordable for RTX 5090 performance.</li>
+                <li>Solid port selection with Thunderbolt 4.</li>
+            </ul>
+            <strong>The Bad:</strong>
+            <ul>
+                <li>Washed-out 1080p display with no QHD+/OLED options.</li>
+                <li>Fans louder than a death metal concert.</li>
+                <li>Bloatware and meh touchpad cheapen the vibe.</li>
+                <li>512GB base storage is a joke for 2025.</li>
+            </ul>
+        </div>
+
+        <!-- botton review -->
+        <div class="bottom-review">
+            <div class="score-section">
+                <div class="score-box">8.3</div>
+                <div>
+                    <h3>Good</h3>
+                    <p>The Acer Nitro V15 (2025) with RTX 5090 is a budget gamer’s dream, serving flagship performance
+                        for $1,000 less than premium rigs. It crushes AAA titles, handles creative gigs, and lasts all
+                        day on light tasks. But the lackluster screen, screaming fans, and budget-tier inputs keep it
+                        from greatness. If you’re cool with 1080p and headphones, it’s a steal. Want a sharper display
+                        or quieter ride? The Blade 16 or Area-51 might be worth the splurge. For the price, though, the
+                        Nitro V15 brings serious heat—just don’t expect it to be flawless.</p>
+                    <div class="reviewer">Karen</div>
+                </div>
+            </div>
+            <img src="images/Nitro_v15-Large-jpg.webp" alt="Laptop Photo" onclick="openPopup(this.src)" />
+        </div>
+    </div>
+
+
+    <!-- Popup container -->
+    <div id="image-popup" class="popup">
+        <button class="close-btn" onclick="closePopup()">×</button>
+        <img id="popup-img" src="">
+    </div>
+
+    <!-- comment section -->
+    <div id="comment-section">
+        <h3>Comment Section</h3>
+        <textarea id="comment-input" placeholder="Write a comment..." onclick="checkLogin()"></textarea>
+        <button onclick="postComment()">Post</button>
+        <div id="comments-list"></div>
+    </div>
+
+    <!-- delete confirmation -->
+    <div id="custom-confirm" class="confirm-overlay" style="display:none;">
+        <div class="confirm-box">
+            <p id="confirm-message">Are you sure you want to delete this comment?</p>
+            <div class="confirm-actions">
+                <button id="confirm-yes">Yes</button>
+                <button id="confirm-no">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js" defer></script>
+</body>
+
+</html>

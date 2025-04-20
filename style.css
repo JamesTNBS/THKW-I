@@ -1,0 +1,1260 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #222;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* container */
+.container {
+    max-width: 90%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 30px;
+    transition: margin-left 1.00s ease-in-out;
+    display: flex;
+    /* Make container a flex container */
+    flex-direction: column;
+    /* Stack children vertically */
+    align-items: center;
+    /* Center children horizontally */
+}
+
+.container.shifted {
+    margin-left: 241px;
+    /* Same width as your side panel */
+}
+
+.separate-main {
+    width: 90%;
+    border-bottom: 3px solid #444;
+    /* Dark mode separator color */
+    transition: background 0.3s ease;
+}
+
+body.light .separate-main {
+    border-bottom: 3px solid #ccc;
+    /* Light mode separator color */
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    background-color: #1e1e1e;
+  }
+  th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #333;
+  }
+  th {
+    text-align: left;
+    color: #bbbbbb;
+  }
+
+/* comment section */
+#comment-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 70%;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #1e1e1e;
+    color: #fff;
+    transition: margin-left 1.00s ease-in-out;
+}
+
+#comment-section {
+    transition: margin-left 1.0s ease-in-out;
+}
+
+#comment-section.shifted {
+    margin-left: 241px;
+    /* Same as side panel width */
+}
+
+table {
+    margin-bottom: 20px;
+}
+
+.Benchmarks {
+    width: 80%;
+    font-size: 1.2em;
+    padding-right: 110px;
+}
+
+h1 {
+    font-size: 2.2em;
+    color: #7348d9;
+}
+
+h2 {
+    align-self: flex-start;
+    /* Align to the left */
+    margin-left: 5%;
+    /* Ensure no extra left margin */
+    color: #7348d9;
+}
+
+h4 {
+    font-size: 2em;
+    color: #7348d9;
+}
+
+p {
+    font-size: 1.2em;
+    width: 90%;
+}
+
+.meta {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* images */
+img {
+    display: block;
+    border-radius: 10px;
+}
+
+img.hero {
+    display: block;
+    width: 70%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* popup images */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.popup img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 20px;
+}
+
+/* Close button */
+.popup .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 3001;
+    background: none;
+    border: none;
+}
+
+/* content */
+h2 {
+    color: #7348d9;
+    border-left: 4px solid #7348d9;
+    padding-left: 10px;
+    margin-top: 30px;
+}
+
+.verdict {
+    background: #eee;
+    width: 90%;
+    padding: 15px;
+    margin-top: 30px;
+    border-left: 5px solid #7348d9;
+    border-radius: 10px;
+}
+
+/* light mode */
+.toggle-light-mode {
+    background: #fff;
+    /* Dark mode toggle background */
+    color: #000;
+    /* Dark mode toggle icon */
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 50%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode theme styles */
+body.light {
+    background: #f4f4f4;
+    color: #222;
+}
+
+body.light .container {
+    background: #eee;
+}
+
+body.light .verdict {
+    background: #e9e7e7;
+}
+
+body.light .toggle-light-mode {
+    background: #222;
+    color: #fff;
+}
+
+/* Dark mode (default) */
+body.dark {
+    background: #121212;
+    color: #ddd;
+}
+
+body.dark .container {
+    background: #1e1e1e;
+}
+
+body.dark .verdict {
+    background: #333;
+}
+
+body.dark .toggle-light-mode {
+    background: #fff;
+    color: #000;
+}
+
+/* D/L mode transition speed */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light {
+    background: #f4f4f4;
+    color: #222;
+}
+
+body.dark {
+    background: #121212;
+    color: #ddd;
+}
+
+/* 3 line */
+.menu-toggle {
+    position: fixed;
+    top: 5px;
+    left: 10px;
+    z-index: 1100;
+    background: none;
+    font-size: 24px;
+    transition: left 0.2s ease;
+    cursor: pointer;
+}
+
+.side-panel.open~.menu-toggle {
+    left: 180px;
+    /* moves button to the right when panel is open */
+}
+
+.menu-toggle i {
+    color: #000;
+}
+
+body.dark .menu-toggle i {
+    color: #fff;
+}
+
+/* side panel */
+.side-panel {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    width: 190px;
+    background: #121212;
+    /* Dark mode side panel background */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    transition: left 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.side-panel.open {
+    left: 0;
+    /* Slide the panel into view */
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* user display */
+#user-display {
+    position: relative;
+    /* Required for pseudo-element positioning */
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #2b2b2b;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.3s ease, color 0.3s ease;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+/* separate */
+.separate1 {
+    margin-top: 30px;
+    border-bottom: 3px solid #444;
+    /* Dark mode separator color */
+    transition: background 0.3s ease;
+}
+
+body.light .separate1 {
+    border-bottom: 3px solid #ccc;
+    /* Light mode separator color */
+}
+
+.separate2 {
+    margin-bottom: 50px;
+    border-bottom: 3px solid #444;
+    /* Dark mode separator color */
+    transition: background 0.3s ease;
+}
+
+body.light .separate2 {
+    border-bottom: 3px solid #ccc;
+    /* Light mode separator color */
+}
+
+.side-panel .nav-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding-bottom: 15px;
+    /* Extra padding for spacing */
+    margin-bottom: 10px;
+    /* Space below the separator */
+}
+
+.separate3 {
+    margin-top: 50px;
+    border-bottom: 3px solid #444;
+    /* Dark mode separator color */
+    transition: background 0.3s ease;
+}
+
+body.light .separate3 {
+    border-bottom: 3px solid #ccc;
+    /* Light mode separator color */
+}
+
+.side-panel .nav-links a {
+    margin: 10px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    color: #7348d9;
+    /* Dark mode link color */
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.side-panel .nav-links a:hover,
+.side-panel .nav-links a:active {
+    background-color: #5a3db1;
+    color: #fff;
+    /* Hover text color remains white in both modes */
+}
+
+body.light .side-panel {
+    background: #fff;
+    /* Light mode side panel background */
+}
+
+body.light .side-panel .nav-links a {
+    color: #5a3db1;
+    /* Light mode link color */
+}
+
+body.light .side-panel .nav-links a:hover,
+body.light .side-panel .nav-links a:active {
+    background-color: #5a3db1;
+    color: #fff;
+}
+
+/* Active link background */
+.side-panel .nav-links a.active {
+    background-color: #9476ed;
+    /* Active link background */
+    color: #fff;
+    /* Active link text */
+}
+
+/* Login button */
+#login-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #4caf50;
+    /* Dark mode login button background */
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#login-btn:hover {
+    background-color: #388e3c;
+}
+
+body.light #login-btn {
+    background-color: #4caf50;
+    /* Keep the same color for consistency */
+}
+
+/* logout button */
+#logout-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 50%;
+    background-color: #d9534f;
+    /* Dark mode logout button background */
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+    /* hidden by default */
+    transition: background-color 0.3s ease;
+}
+
+#logout-btn:hover {
+    background-color: #c9302c;
+}
+
+body.light #logout-btn {
+    background-color: #d9534f;
+    /* Keep the same color for consistency */
+}
+
+/* rating */
+.bottom-review {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-top: 10px;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 10px;
+    background-color: #333;
+}
+
+body.light .bottom-review {
+    background-color: #e9e7e7;
+    transition: background-color 0.3s ease;
+}
+
+.bottom-review h3 {
+    margin-top: 0;
+    width: 100%;
+}
+
+.bottom-review img {
+    width: 100%;
+    /* Default for all screens, will be overridden for large screens */
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+    flex: 0 0 auto;
+}
+
+.score-box {
+    background: #7348d9;
+    color: white;
+    font-weight: bold;
+    width: 350px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    border-radius: 20px;
+    margin-right: 15px;
+}
+
+.score-section {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 30px;
+    flex: 1;
+    /* Allow score-section to grow and take available space */
+    min-width: 400px;
+}
+
+.reviewer {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Large screens: Adjust image */
+@media (min-width: 900px) {
+    .bottom-review img {
+        width: 40%;
+        height: auto;
+        /* Smaller width for large screens */
+        border-radius: 15px;
+        /* Slightly larger border-radius */
+        margin-left: auto;
+        /* Ensure it’s aligned to the right */
+    }
+}
+
+/* Small screens: Stack layout */
+@media (max-width: 768px) {
+    .bottom-review {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .score-section {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .bottom-review img {
+        width: 80%;
+        /* Already the default, but ensures it’s applied */
+        margin-left: 0;
+        margin-top: 20px;
+
+    }
+
+    .score-box {
+        width: 200px;
+        height: 60px;
+        font-size: 30px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .score-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .score-box {
+        width: 50%;
+        height: 50px;
+        font-size: 24px;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+body.light #comment-section {
+    background-color: #e9e7e7;
+    /* Lighter background in light mode */
+    color: #222;
+    /* Darker text in light mode */
+}
+
+#comment-input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #2c2c2c;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 10px;
+}
+
+body.light #comment-input {
+    background: #e2e2e2;
+    /* Lighter background for input in light mode */
+    color: #333;
+    /* Darker text for input in light mode */
+    border: 1px solid #ccc;
+    /* Lighter border */
+}
+
+#comment-section button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #7348d9;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.comment {
+    background: #2b2b2b;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #7348d9;
+}
+
+body.light .comment {
+    background: #e2e2e2;
+    /* Lighter background for input in light mode */
+    color: #333;
+    /* Darker text for input in light mode */
+    border: 1px solid #ccc;
+    /* Lighter border */
+}
+
+/* delete button */
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+/* delete confirmation */
+.confirm-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.confirm-box {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+}
+
+.confirm-box p {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.confirm-actions button {
+    margin: 0 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#confirm-yes {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#confirm-no {
+    background-color: #ccc;
+    color: black;
+}
+
+/* Dark mode for delete confirmation */
+body.dark .confirm-box {
+    background: #2b2b2b;
+    color: #fff;
+}
+
+body.dark .confirm-actions button#confirm-no {
+    background-color: #444;
+    color: #ddd;
+}
+
+body.dark .confirm-actions button#confirm-no:hover {
+    background-color: #666;
+}
+
+body.dark .confirm-actions button#confirm-yes {
+    background-color: #e74c3c;
+    color: white;
+}
+
+body.dark .confirm-actions button#confirm-yes:hover {
+    background-color: #c0392b;
+}
+
+/* Light mode enhancements */
+body.light .confirm-box {
+    background: #fff;
+    color: #222;
+}
+
+body.light .confirm-actions button#confirm-no {
+    background-color: #ccc;
+    color: black;
+}
+
+body.light .confirm-actions button#confirm-no:hover {
+    background-color: #bbb;
+}
+
+body.light .confirm-actions button#confirm-yes {
+    background-color: #e74c3c;
+    color: white;
+}
+
+body.light .confirm-actions button#confirm-yes:hover {
+    background-color: #c0392b;
+}
+
+/* Login popup */
+.login-popup {
+    display: none;
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+body.light .login-popup {
+    background: rgba(255, 255, 255, 0.8);
+    /* Lighter background with less opacity */
+}
+
+.login-content {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+body.light .login-content {
+    background: #fff;
+    /* White background in light mode */
+    color: #333;
+    /* Dark text in light mode */
+}
+
+.login-content input {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    background: #2b2b2b;
+    color: #fff;
+}
+
+body.light .login-content input {
+    background: #fff;
+    /* White background in light mode */
+    color: #333;
+    /* Dark text in light mode */
+}
+
+.login-content button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background: #7348d9;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+body.light .login-content button {
+    background: #7348d9;
+    /* Keep purple button for consistency */
+    color: white;
+    /* White text for button */
+}
+
+.close-login {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+body.light .close-login {
+    color: #000;
+    /* Black close button for light mode */
+}
+
+body.dark .toggle-light-mode:hover {
+    background: #5a3db1;
+}
+
+.menu-toggle:hover {
+    background-color: #5a3db1;
+}
+
+/* Button hover effect */
+#comment-section button:hover,
+.login-content button:hover,
+.toggle-light-mode:hover {
+    background: #5a3db1;
+    transform: scale(1.05);
+}
+
+#comment-section button:active,
+.login-content button:active,
+body.dark .toggle-light-mode:active,
+.menu-toggle:active,
+.toggle-light-mode:active {
+    background: #3e2a8b;
+    transform: scale(1);
+}
+
+/* Search Popup */
+.search-popup {
+    display: none;
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 105vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    /* Dark mode popup overlay */
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    scrollbar-width: thin;
+    scrollbar-color: #7348d9 #333;
+}
+
+.search-results::-webkit-scrollbar {
+    width: 10px;
+}
+
+.search-results::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 5px;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background: #7348d9;
+    border-radius: 5px;
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+    background: #5a3db1;
+}
+
+body.light .search-results {
+    background: #f0f0f0;
+    color: #333;
+    scrollbar-color: #5a3db1 #e0e0e0;
+}
+
+body.light .search-results::-webkit-scrollbar-track {
+    background: #e0e0e0;
+}
+
+body.light .search-results::-webkit-scrollbar-thumb {
+    background: #5a3db1;
+}
+
+body.light .search-results::-webkit-scrollbar-thumb:hover {
+    background: #3e2a8b;
+}
+
+body.light .search-popup {
+    background: rgba(255, 255, 255, 0.8);
+    /* Light mode popup overlay */
+}
+
+.search-content {
+    background: #1e1e1e;
+    /* Dark mode popup background */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    color: white;
+    /* Dark mode popup text */
+    width: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.light .search-content {
+    background: #fff;
+    /* Light mode popup background */
+    color: #333;
+    /* Light mode popup text */
+}
+
+.search-content input {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    background: #2b2b2b;
+    /* Dark mode input background */
+    color: #fff;
+    /* Dark mode input text */
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+body.light .search-content input {
+    background: #fff;
+    /* Light mode input background */
+    color: #333;
+    /* Light mode input text */
+    border: 1px solid #ccc;
+    /* Light mode input border */
+}
+
+.search-content button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background: #7348d9;
+    /* Dark mode button background */
+    color: white;
+    /* Dark mode button text */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-content button:hover {
+    transform: scale(1.02);
+    background: #7348d9;
+    /* Dark/light mode hover */
+}
+
+body.light .search-content button {
+    background: #5a3db1;
+    /* Light mode button background (slightly adjusted for contrast) */
+    color: white;
+}
+
+.close-search {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+    /* Dark mode close icon */
+    transition: color 0.3s ease;
+}
+
+body.light .close-search {
+    color: #000;
+    /* Light mode close icon */
+}
+
+/* Search results container */
+.search-results {
+    
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 5px;
+    background: #2b2b2b;
+    /* Dark mode background */
+    color: #fff;
+    /* Dark mode text */
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.light .search-results {
+    background: #f0f0f0;
+    /* Light mode background */
+    color: #333;
+    /* Light mode text */
+}
+
+/* Mini card styling */
+.mini-card {
+    display: flex;
+    align-items: center;
+    background: #3a3a3a;
+    /* Dark mode card background */
+    border: 1px solid #555;
+    /* Dark mode border */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 8px;
+    transition: transform 0.3s ease, background 0.3s ease, border 0.3s ease;
+}
+
+body.light .mini-card {
+    background: #fff;
+    /* Light mode card background */
+    border: 1px solid #ddd;
+    /* Light mode border */
+}
+
+.mini-card:hover {
+    transform: scale(1.02);
+    background: #4a4a4a;
+    /* Dark mode hover */
+}
+
+body.light .mini-card:hover {
+    background: #f5f5f5;
+    /* Light mode hover */
+}
+
+/* Mini card link (removes default link styling) */
+.mini-card-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Mini card image */
+.mini-card-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.story-card .mini-card-link img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+/* Images in Featured Articles (article-item) */
+.article-item .mini-card-link img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+/* Images in More Stories (story-item) */
+.story-item .mini-card-link img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+/* Mini card content */
+.mini-card-content {
+    flex: 1;
+}
+
+.mini-card-content h4 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #1e90ff;
+    /* Link color */
+}
+
+body.light .mini-card-content h4 {
+    color: #1e90ff;
+}
+
+.mini-card-content p {
+    margin: 0;
+    font-size: 12px;
+    color: #ccc;
+    /* Dark mode text */
+}
+
+body.light .mini-card-content p {
+    color: #666;
+    /* Light mode text */
+}
+
+.mini-card-content .snippet {
+    font-size: 11px;
+    color: #aaa;
+    /* Dark mode snippet */
+}
+
+body.light .mini-card-content .snippet {
+    color: #888;
+    /* Light mode snippet */
+}
+
+/* Highlighted text in snippet */
+.mini-card-content .highlight {
+    background: #7348d9;
+    /* Dark mode highlight */
+    color: #fff;
+    padding: 1px 3px;
+    border-radius: 3px;
+}
+
+body.light .mini-card-content .highlight {
+    background: #5a3db1;
+    /* Light mode highlight */
+}
+
+/* Ensure the link spans the entire card and looks seamless */
+.mini-card-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    /* Ensure it covers the entire card height */
+    cursor: pointer;
+    /* Indicate clickability */
+}
+
+/* Remove any default link underline or color changes */
+.mini-card-link:hover {
+    text-decoration: none;
+}
+
+/* Ensure the mini card itself doesn't interfere with the link */
+.mini-card {
+    display: flex;
+    align-items: center;
+    background: #3a3a3a;
+    border: 1px solid #555;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 8px;
+    transition: transform 0.3s ease, background 0.3s ease, border 0.3s ease;
+    width: 95%;
+    /* Ensure the card takes full width */
+}
+
+body.light .mini-card {
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.mini-card:hover {
+    transform: scale(1.02);
+    background: #4a4a4a;
+}
+
+body.light .mini-card:hover {
+    background: #f5f5f5;
+}
+
+/* Ensure articles support the clickable wrapper */
+.story-card,
+.article-item,
+.story-item {
+    position: relative;
+    width: 100%;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.story-card:hover,
+.article-item:hover,
+.story-item:hover {
+    transform: scale(1.02);
+}
+
+/* Ensure the link inside the article spans the entire area */
+.story-card .mini-card-link,
+.article-item .mini-card-link,
+.story-item .mini-card-link {
+    display: flex;
+    /* Match the existing layout */
+    flex-direction: column;
+    /* Stack image and content vertically for story-card */
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* For article-item and story-item, adjust flex direction to match their layout */
+.article-item .mini-card-link,
+.story-item .mini-card-link {
+    flex-direction: row;
+    /* Image and content side by side */
+    align-items: center;
+}
+
+/* Ensure images and text inside the link are not affected */
+.story-card img,
+.article-item img,
+.story-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.story-card .story-content,
+.article-item .article-content,
+.story-item .story-content {
+    flex: 1;
+}
+
+.story-card h3,
+.article-item h3,
+.story-item h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.story-card p,
+.article-item p,
+.story-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Ensure meta elements in article-item are styled correctly */
+.article-item .article-meta {
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    margin-top: 5px;
+}

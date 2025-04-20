@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/home.css">
+</head>
+
+<body>
+  <!-- Login -->
+  <div id="login-modal" class="login-popup">
+    <div class="login-content">
+      <span class="close-login" onclick="closeLoginPopup()">×</span>
+      <h4>Login Required</h4>
+      <input type="text" id="username" placeholder="Enter your username">
+      <button onclick="login()">Login</button>
+    </div>
+  </div>
+
+  <!-- Search Popup -->
+  <div id="search-modal" class="search-popup">
+    <div class="search-content">
+      <span class="close-search" onclick="closeSearchPopup()">×</span>
+      <h4>Search</h4>
+      <input type="text" id="search-input" placeholder="Enter your search...">
+      <button onclick="performSearch()">Search</button>
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Side panel -->
+    <div class="side-panel" id="sidePanel">
+      <!-- show user name -->
+      <p id="user-display"><i class="fas fa-user"></i> <span id="username-text"></span></p>
+
+      <!-- separate line -->
+      <div class="separate1">
+      </div>
+
+      <div class="nav-links">
+        <a href="/index.html" class="active"><span>🏠</span>Home</a>
+        <a href="#search"><span>🔍</span>Search</a>
+      </div>
+
+      <!-- separate line -->
+      <div class="separate2">
+      </div>
+
+      <button class="toggle-light-mode">
+        <i class="fas fa-sun"></i>
+      </button>
+      <!-- login button -->
+      <button id="login-btn" onclick="checkLogin()">Login</button>
+      <!-- Add Logout button directly -->
+      <button id="logout-btn" onclick="logout()">Logout</button>
+
+      <!-- separate line -->
+      <div class="separate3">
+      </div>
+
+    </div>
+
+    <!-- 3-dot menu button -->
+    <button class="menu-toggle" onclick="toggleSidePanel()">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Top reviews Section -->
+    <section class="top-stories">
+      <h2 class="section-title">Top Reviews</h2>
+      <div class="stories-grid">
+        <article class="story-card" id="story-1">
+          <a href="/review1.html" class="mini-card-link">
+            <img
+              src="images/notebookcheck-asus-rog-zephyrus-g16-2024-review-the-gaming-v0-6vLwd5V8GrU1aHTw3w0TjUNT-BFwyt9XulBtPEKhJPU.webp"
+              alt="Asus Zephyrus G16">
+            <div class="story-content">
+              <h3>ASUS ROG Zephyrus G16 (2025) Review</h3>
+              <p>The latest Asus Zephyrus G16 brings RTX 5080 power in a compact form factor for gamers on the go.</p>
+            </div>
+          </a>
+        </article>
+        <article class="story-card" id="story-2">
+          <a href="/review4.html" class="mini-card-link">
+            <img src="images/CES-2025-Razer-Blade-16-2025-1.jpg" alt="Razer Blade 16">
+            <div class="story-content">
+              <h3>Razer Blade 16 (2025) with RTX 5090: A Slim Powerhouse with a Premium Price</h3>
+              <p>A deep dive into the Razer Blade 16 with Nvidia's RTX 5090, offering stunning performance and sleek
+                design.</p>
+            </div>
+          </a>
+        </article>
+        <article class="story-card" id="story-3">
+          <a href="/review7.html" class="mini-card-link">
+            <img src="images/a0b3d41d0d130e14f93fd5553b6a4082.png" alt="Acer Aspire 3">
+            <div class="story-content">
+              <h3>Acer Aspire 3: Best Budget Laptop Under $500 in 2025</h3>
+              <p>Explore why the Acer Aspire 3 remains a top choice for budget-conscious buyers with solid performance.
+              </p>
+            </div>
+          </a>
+        </article>
+        <article class="story-card" id="story-4">
+          <a href="/review10.html" class="mini-card-link">
+            <img src="images/apple-m4-macbook-pro-lead-672b861685fd0.jpg" alt="MacBook Air M4">
+            <div class="story-content">
+              <h3>MacBook Air M4 Review: A Budget-Friendly Powerhouse</h3>
+              <p>Apple's MacBook Air M4 drops to $999, offering incredible value with top-tier performance.</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+      <h2 class="section-title">Featured reviews</h2>
+      <div class="articles-list">
+        <article class="article-item" id="article-1">
+          <a href="/review2.html" class="mini-card-link">
+            <img
+              src="images/asus-rog-strix-scar-18-2023-g834jy-review-gaming-laptop-v0-5szi2Z76699GTMRQuR-vQDbySXiHqFTqNsfOp1EGMLk.webp"
+              alt="ROG Strix Scar 18">
+            <div class="article-content">
+              <h3>Asus ROG Strix Scar 18 with RTX 5070 Ti: A Powerhouse for Gaming and Creation</h3>
+              <p>2h ago - A big-screen gaming laptop with impressive graphics for under $3,000.</p>
+              <div class="article-meta">
+                <span class="tag">ASUS ROG STRIX SCAR 18</span>
+                <span class="author">TOM'S GUIDE TEAM</span>
+              </div>
+            </div>
+          </a>
+        </article>
+        <article class="article-item" id="article-2">
+          <a href="/review5.html" class="mini-card-link">
+            <img src="images/3af90a6e3d267b234e2114cc703b0753.webp" alt="Acer Nitro V15">
+            <div class="article-content">
+              <h3>Acer Nitro V15 (2025) with RTX 5090: Budget Beast or Compromise King?</h3>
+              <p>2h ago - Affordable gaming with a 144Hz display and solid performance.</p>
+              <div class="article-meta">
+                <span class="tag">ACER NITRO V15</span>
+                <span class="author">MATT ELLIOTT</span>
+              </div>
+            </div>
+          </a>
+        </article>
+        <article class="article-item" id="article-3">
+          <a href="/review8.html" class="mini-card-link">
+            <img src="images/asus-vivobook-16-review.webp" alt="Asus Vivobook 16">
+            <div class="article-content">
+              <h3>Asus Vivobook 16 M1605: The Best Budget Ultraportable of 2025</h3>
+              <p>2h ago - A well-built 16-inch laptop perfect for productivity on a budget.</p>
+              <div class="article-meta">
+                <span class="tag">ASUS VIVOBOOK 16</span>
+                <span class="author">KIMBER STREAMS</span>
+              </div>
+            </div>
+          </a>
+        </article>
+        <article class="article-item" id="article-4">
+          <a href="/review11.html" class="mini-card-link">
+            <img src="images/8611408_Tren_tay_HP_CES25-40.webp" alt="HP Omen Max 16">
+            <div class="article-content">
+              <h3>HP Omen Max 16 with RTX 5080: Official Launch Trailer</h3>
+              <p>2h ago - A high-performance gaming laptop now available in India.</p>
+              <div class="article-meta">
+                <span class="tag">HP OMEN MAX 16</span>
+              </div>
+            </div>
+          </a>
+        </article>
+        <article class="article-item" id="article-5">
+          <a href="/review13.html" class="mini-card-link">
+            <img src="images/Lenovo-ThinkBook-14-2-in-1-Gen-4-01.jpg" alt="Lenovo ThinkBook 14">
+            <div class="article-content">
+              <h3>Lenovo ThinkBook 14 2-in-1 Gen 4: Budget Business Laptop Teaser</h3>
+              <p>2h ago - A versatile 2-in-1 with upgradable RAM and SSD.</p>
+              <div class="article-meta">
+                <span class="tag">LENOVO THINKBOOK 14</span>
+              </div>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- More Stories Section -->
+    <section class="more-stories">
+      <h2 class="section-title">More reviews</h2>
+      <div class="stories-list">
+        <article class="story-item" id="more-story-1">
+          <a href="/review3.html" class="mini-card-link">
+            <img src="images/Alienware-Area-51-Laptop-Frontside-2.webp" alt="Alienware Area-51">
+            <div class="story-content">
+              <h3>Alienware Area-51 Laptops with RTX 5090: A Galactic Leap in Gaming Power</h3>
+              <p>A premium gaming laptop with cutting-edge graphics.</p>
+            </div>
+          </a>
+        </article>
+        <article class="story-item" id="more-story-2">
+          <a href="/review6.html" class="mini-card-link">
+            <img src="images/qqq.jpg" alt="Acer Swift Go 14">
+            <div class="story-content">
+              <h3>Acer Swift Go 14 (2025): Affordable Powerhouse with Stunning OLED</h3>
+              <p>Outstanding performance and battery life for under $1,000.</p>
+            </div>
+          </a>
+        </article>
+        <article class="story-item" id="more-story-3">
+          <a href="/review9.html" class="mini-card-link">
+            <img src="images/HP-Victus-15-1.webp" alt="HP Victus 15">
+            <div class="story-content">
+              <h3>HP Victus 15 Review: Budget Gaming Laptop That Delivers</h3>
+              <p>Solid 1080p gaming with a fast 144Hz display.</p>
+            </div>
+          </a>
+        </article>
+        <article class="story-item" id="more-story-4">
+          <a href="/review12.html" class="mini-card-link">
+            <img src="images/lenovo-ideapad-flex-5i-chromebook-plus-review-4.avif" alt="Lenovo Flex 5i">
+            <div class="story-content">
+              <h3>Lenovo Flex 5i Chromebook Plus: Best Budget Chromebook</h3>
+              <p>A reliable Chromebook with long battery life for students.</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <script src="/script.js" defer></script>
+</body>
+
+</html>

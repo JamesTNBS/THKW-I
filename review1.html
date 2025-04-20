@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASUS ROG Zephyrus G16 (2025) Review</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+  <!-- Login -->
+  <div id="login-modal" class="login-popup">
+    <div class="login-content">
+      <span class="close-login" onclick="closeLoginPopup()">&times;</span>
+      <h4>Login Required</h4>
+      <input type="text" id="username" placeholder="Enter your username">
+      <button onclick="login()">Login</button>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- Side panel -->
+    <div class="side-panel" id="sidePanel">
+
+      <!-- show user name -->
+      <p id="user-display"><i class="fas fa-user"></i> <span id="username-text"></span></p>
+
+      <!-- Search Popup -->
+      <div id="search-modal" class="search-popup">
+        <div class="search-content">
+          <span class="close-search" onclick="closeSearchPopup()">×</span>
+          <h4>Search</h4>
+          <input type="text" id="search-input" placeholder="Enter your search...">
+          <button onclick="performSearch()">Search</button>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      </div>
+
+      <!-- separate line -->
+      <div class="separate1">
+      </div>
+
+      <div class="nav-links">
+        <a href="/index.html" class="active"><span>🏠</span>Home</a>
+        <a href="#search"><span>🔍</span>Search</a>
+        <a href="#overview">Overview</a>
+        <a href="#design">Design</a>
+        <a href="#display">Display</a>
+        <a href="#performance">Performance</a>
+        <a href="#cooling">Cooling</a>
+        <a href="#battery">Battery Life</a>
+        <a href="#software">Software and Extras</a>
+        <a href="#Price and Value">Price and Value</a>
+        <a href="#verdict">Verdict</a>
+      </div>
+
+      <div class="separate2">
+      </div>
+
+      <button class="toggle-light-mode">
+        <i class="fas fa-sun"></i>
+      </button>
+
+      <!-- login button -->
+      <button id="login-btn" onclick="checkLogin()">Login</button>
+
+      <!-- Add Logout button directly -->
+      <button id="logout-btn" onclick="logout()">Logout</button>
+
+      <!-- separate line -->
+      <div class="separate3">
+      </div>
+
+    </div>
+
+    <!-- 3-dot menu button -->
+    <button class="menu-toggle" onclick="toggleSidePanel()">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Content -->
+
+    <h1>ASUS ROG Zephyrus G16 (2025) Review</h1>
+    <div class="meta">By James TNBS | April 12, 2025</div>
+
+    <div class="separate-main">
+    </div>
+
+    <h2 id="overview">Overview</h2>
+    <p>The ASUS ROG Zephyrus G16 has long been a darling of the gaming laptop world, blending high-end performance with
+      a svelte, MacBook-esque design that dares to whisper "professional" while screaming "gamer" under the hood. The
+      2025 model (GU605) ups the ante with Intel's Core Ultra 9 285H processor, NVIDIA's RTX 50-series GPUs, and a
+      jaw-dropping 16-inch OLED display. But with a starting price north of $2,799 and stiff competition from Razer and
+      Lenovo, does it still deserve its crown as the ultimate thin-and-light gaming machine? After diving into its
+      specs, testing its limits, and living with it for a while, here's my take.</p>
+
+    <img src="images/image.jpg" alt="ROG Zephyrus G16" class="hero" onclick="openPopup(this.src)" />
+
+    <h2 id="design">Design: Premium, Portable, and Polished</h2>
+    <p>From the moment you unbox the Zephyrus G16, it's clear ASUS isn't messing around. The CNC-machined aluminum
+      chassis—available in Eclipse Gray or Platinum White—feels like it could go toe-to-toe with a MacBook Pro. At just
+      1.85 kg and under 1.5 cm thick in spots, it's a marvel of engineering for a 16-inch gaming laptop. The “Slash
+      Lighting” LED strip on the lid adds a subtle flair, replacing the flashier AniMe Matrix of older models. It's the
+      kind of laptop you'd confidently pull out at a coffee shop or a LAN party.</p>
+    <img src="images/asus-rog-zephyrus-g16-laptop-review-2025-04-16-906979-1536x864.webp" alt="ROG Zephyrus G16"
+      class="hero" onclick="openPopup(this.src)" />
+    <img src="images/ASUS-ROG-Zephyrus-G16-2024-Review-Philippines-02.jpg" class="hero" onclick="openPopup(this.src)" />
+    <p>Ports are plentiful: two USB-C (one with Thunderbolt 4), two USB-A, HDMI 2.1, a full-size SD card reader, and a
+      headphone jack. Creators will love the SD slot, though its 80-90 MB/s speeds aren't breaking records. The keyboard
+      is a joy for typing, with springy keys and a Copilot button for AI enthusiasts, but it lacks the buttery
+      refinement of a Razer Blade. The massive trackpad is smooth, though its click feels a tad hollow. My one gripe?
+      The palm rest has a hint of flex under pressure—not a dealbreaker, but noticeable on a $3,000+ machine.</p>
+    <img src="images/asus-rog-zephyrus-g16-laptop-review-2025-04-16-403614-1536x864.webp" alt="ROG Zephyrus G16"
+      class="hero" onclick="openPopup(this.src)" />
+    <img src="images/asus-rog-zephyrus-g16-laptop-review-2025-04-16-523372-1536x864.webp" alt="ROG Zephyrus G16"
+      class="hero" onclick="openPopup(this.src)" />
+    <p>The 1080p webcam gets the job done for video calls, and the speakers? Wow. They pump out rich, bassy sound that
+      rivals high-end ultrabooks, making movies and music a treat without headphones.
+    </p>
+    <img src="images/webcam-sample-1728966815790.jpg" alt="ROG Zephyrus G16" class="hero"
+      onclick="openPopup(this.src)" />
+
+    <h2 id="display">Display: OLED Magic, But Not Without Caveats</h2>
+    <img src="images/rFGH9GALVrnscxkuzfEkfW.jpg" alt="ROG Zephyrus G16" class="hero" onclick="openPopup(this.src)" />
+    <p>The star of the show is the 16-inch, 2560x1600 (QHD+), 240Hz OLED Nebula Display. With 100% DCI-P3 coverage, a
+      0.2ms response time, and VESA DisplayHDR True Black 500 certification, it's a visual feast. Playing Cyberpunk 2077
+      on this panel feels like stepping into Night City—colors pop, blacks are inky, and NVIDIA G-Sync keeps everything
+      buttery smooth. For creators, the Delta E < 1 accuracy makes photo and video editing a dream.</p>
+        <p>That said, it's not flawless. Peak brightness hits ~500 nits (600 in HDR for small areas), which is great for
+          OLED but trails mini-LED rivals like the Lenovo Legion Pro 7i. In bright rooms, reflections can be a nuisance.
+          And while ASUS's pixel-shift tech mitigates burn-in, I'd be cautious about leaving static HUDs on-screen for
+          hours. Still, for gaming and Netflix binges, this is one of the best displays I've seen on a laptop.</p>
+
+        <h2 id="performance">Performance: Potent, But Thermally Tamed</h2>
+        <p>Under the hood, the G16 packs Intel's Core Ultra 9 285H (16 cores, 16 threads) and, in my test unit, an RTX
+          5080 running at 120W TGP. Configurations range from RTX 5070 to RTX 5090, with up to 64GB of LPDDR5X RAM
+          (soldered, sadly) and 2TB SSD storage. On paper, it's a beast, but the slim chassis imposes limits.</p>
+        <img src="images/benchmarks-1728969515454.jpg" alt="ROG Zephyrus G16" class="hero"
+          onclick="openPopup(this.src)" />
+        <p>Gaming at 1440p is impressive but not class-leading. In Baldur's Gate 3, I hit ~55-60 FPS on Ultra with DLSS
+          4, smooth enough to lose myself in Faerûn. DOOM Eternal screamed along at 120+ FPS, leveraging the 240Hz
+          panel. However, compared to thicker laptops like the Gigabyte Aorus Master 16 (175W RTX 5090), the G16's lower
+          TGP means you'll tweak settings in some AAA titles to max out frame rates. The RTX 50-series' efficiency and
+          DLSS 4 help, but don't expect desktop-replacement power.</p>
+        <p>For creative work, the G16 shines. Editing 4K video in Premiere Pro was snappy, and Photoshop handled large
+          RAW files with ease. But the Core Ultra 9 285H feels like a step back from 2024's Meteor Lake chip in
+          sustained CPU tasks—think 3D rendering or heavy compiles—where multi-core performance dips. If you're a
+          creator who moonlights as a gamer, 32GB RAM is a must.</p>
+        <img src="images/Asus-ROG-Zephyrus-G16-2024-review-verdict.webp" alt="ROG Zephyrus G16" class="hero"
+          onclick="openPopup(this.src)" />
+
+        <h2 id="cooling">Cooling: Clever, But Not Miraculous</h2>
+        <p>ASUS's ROG Intelligent Cooling—vapor chamber (on high-end models), liquid metal, Tri-Fan setup, and 2nd Gen
+          Arc Flow Fans—works hard to keep temps in check. During long Warhammer 40,000: Space Marine 2 sessions, the
+          keyboard stayed comfy, but vents got toasty, and the chassis near the back could double as a hand warmer.
+          Turbo Mode unleashes max power at the cost of sounding like a small jet engine, while Silent Mode is
+          blissfully quiet but dials back performance.</p>
+        <p>Compared to 2024's G16, the vapor chamber helps, but the thin design can't fully tame an RTX 5080 or 5090
+          under load. Its a trade-off: portability over absolute thermal dominance.</p>
+        <img src="images/gaming-turbo-screen.jpg" alt="ROG Zephyrus G16" class="hero" onclick="openPopup(this.src)" />
+
+        <h2 id="battery">Battery Life: Surprisingly Solid</h2>
+        <img src="images/ASUS-ROG-Zephyrus-G16-2024-Review-Philippines-02.jpg" class="hero"
+          onclick="openPopup(this.src)" />
+        <p>With a 90Wh battery, the G16 defies gaming laptop stereotypes. Light tasks like writing this review or
+          browsing Chrome lasted ~8-10 hours, and looping a 1080p video stretched to 13 hours in power-saving mode. Fast
+          charging (0-50% in 30 minutes) is a lifesaver. Gaming, naturally, tanks it in 1-2 hours, but that's par for
+          the course.</p>
+        <p>The 200W charger is a brick, though some configs include a compact USB-C option for travel. Against the 2024
+          AMD-based G16, it's a touch less efficient, but for a gaming laptop, this is stellar.</p>
+
+        <h2 id="software">Software and Extras: Useful, If Cluttered</h2>
+        <p>Armoury Crate is your command center for performance modes, RGB tweaks, and fan curves. It's powerful but
+          bloated, with overlapping options that can confuse. Advanced Optimus handles GPU switching well, though I had
+          to nudge a few apps to use the discrete GPU. As a Copilot+ PC, the G16's NPU enables slick AI tricks—real-time
+          transcription, video enhancements—but gamers won't care much. The ecosystem feels polished, yet I wish ASUS
+          streamlined the software.</p>
+        <img src="images/asus-rog-zephyrus-g16-laptop-review-2025-04-16-769610-1536x864.webp" alt="ROG Zephyrus G16"
+          class="hero" onclick="openPopup(this.src)" />
+
+        <h2 id="Price and Value">Price and Value</h2>
+
+        <img src="images/asus-rog-zephyrus-g16-laptop-review-2025-04-16-769610-1536x864.webp" alt="ROG Zephyrus G16"
+          class="hero" onclick="openPopup(this.src)" />
+
+        <h2 id="verdict">Price and Value</h2>
+        <p>At ~$3,599 for the RTX 5080 config I tested (32GB RAM, 2TB SSD), the G16 isn't cheap. It's a premium buy for
+          those craving a portable, gorgeous laptop that games well and doubles as a creative workstation. But if raw
+          performance is your goal, the Lenovo Legion Pro 7i delivers more grunt for similar cash, and the Razer Blade
+          16 edges out in refinement (at a higher price). The 2024 AMD G16 might even be a better deal if you prioritize
+          efficiency.</p>
+
+        <div class="Benchmarks">
+        <p><b>Who's It For?</b></p>
+        <ul>
+          <li>Gamers who want 1440p visuals in a backpack-friendly package.</li>
+          <li>Creators needing a vibrant OLED for editing on the go.</li>
+          <li>Anyone who values style and versatility over max power.</li>
+        </ul>
+        <p><b>Who Should Pass?</b></p>
+        <ul>
+          <li>FPS chasers needing every last frame.</li>
+          <li>Budget shoppers or those happy with chunkier laptops.</li>
+        </ul>
+      </div>
+
+        <div class="verdict">
+          <strong>Pros:</strong>
+          <ul>
+            <li>Stunning 16-inch 240Hz OLED display with vibrant colors and deep blacks, perfect for gaming and creative
+              work.</li>
+            <li>Sleek, lightweight aluminum chassis that's highly portable and professional-looking.</li>
+            <li>Strong battery life for a gaming laptop, lasting 8-10 hours for light tasks.</li>
+            <li>Versatile port selection, including Thunderbolt 4 and a full-size SD card reader.</li>
+            <li>Punchy speakers with impressive bass, rivaling premium ultrabooks.</li>
+          </ul>
+          <strong>Cons:</strong>
+          <ul>
+            <li>Thermal constraints in the thin chassis limit GPU and CPU performance under heavy loads.</li>
+            <li>Intel Core Ultra 9 285H may underperform in sustained CPU tasks compared to previous models.</li>
+            <li>Pricey for the performance, with better value in bulkier or competing laptops.</li>
+            <li>Armoury Crate software feels bloated and occasionally clunky.</li>
+            <li>Slight chassis flex and average webcam/SD card reader quality for a premium device.</li>
+          </ul>
+        </div>
+
+        <!-- botton review -->
+        <div class="bottom-review">
+          <div class="score-section">
+            <div class="score-box">8.5</div>
+            <div>
+              <h3>Good</h3>
+              <p>The ASUS ROG Zephyrus G16 (2025) is a dazzling blend of form and function, with a display that'll make
+                your eyes fall in love and a build that begs to be shown off. But its thermal limits and slightly
+                underwhelming CPU keep it from dethroning the best. If you're after a laptop that's as comfortable in a
+                boardroom as it is in a gaming den, it’s a fantastic choice—just know you're paying for finesse as much
+                as firepower.</p>
+              <div class="reviewer">James TNBS</div>
+            </div>
+          </div>
+          <img
+            src="images/notebookcheck-asus-rog-zephyrus-g16-2024-review-the-gaming-v0-6vLwd5V8GrU1aHTw3w0TjUNT-BFwyt9XulBtPEKhJPU.webp"
+            alt="Laptop Photo" onclick="openPopup(this.src)" />
+        </div>
+  </div>
+
+
+  <!-- Popup container -->
+  <div id="image-popup" class="popup">
+    <button class="close-btn" onclick="closePopup()">×</button>
+    <img id="popup-img" src="">
+  </div>
+
+  <!-- comment section -->
+  <div id="comment-section">
+    <h3>Comment Section</h3>
+    <textarea id="comment-input" placeholder="Write a comment..." onclick="checkLogin()"></textarea>
+    <button onclick="postComment()">Post</button>
+    <div id="comments-list"></div>
+  </div>
+
+  <!-- delete confirmation -->
+  <div id="custom-confirm" class="confirm-overlay" style="display:none;">
+    <div class="confirm-box">
+      <p id="confirm-message">Are you sure you want to delete this comment?</p>
+      <div class="confirm-actions">
+        <button id="confirm-yes">Yes</button>
+        <button id="confirm-no">No</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/script.js" defer></script>
+</body>
+
+</html>

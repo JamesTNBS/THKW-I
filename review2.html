@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asus ROG Strix Scar 18 (2025) Review</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+    <!-- Login -->
+    <div id="login-modal" class="login-popup">
+        <div class="login-content">
+            <span class="close-login" onclick="closeLoginPopup()">&times;</span>
+            <h4>Login Required</h4>
+            <input type="text" id="username" placeholder="Enter your username">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Side panel -->
+        <div class="side-panel" id="sidePanel">
+
+            <!-- show user name -->
+            <p id="user-display"><i class="fas fa-user"></i> <span id="username-text"></span></p>
+
+            <!-- Search Popup -->
+            <div id="search-modal" class="search-popup">
+                <div class="search-content">
+                    <span class="close-search" onclick="closeSearchPopup()">×</span>
+                    <h4>Search</h4>
+                    <input type="text" id="search-input" placeholder="Enter your search...">
+                    <button onclick="performSearch()">Search</button>
+                    <div id="search-results" class="search-results"></div>
+                </div>
+            </div>
+
+            <!-- separate line -->
+            <div class="separate1">
+            </div>
+
+            <div class="nav-links">
+                <a href="/index.html" class="active"><span>🏠</span>Home</a>
+                <a href="#search"><span>🔍</span>Search</a>
+                <a href="#overview">Overview</a>
+                <a href="#design">Design and Build</a>
+                <a href="#display">Display</a>
+                <a href="#performance">Performance</a>
+                <a href="#cooling">Cooling</a>
+                <a href="#battery">Battery Life</a>
+                <a href="#Price and Value">Price and Value</a>
+                <a href="#verdict">Verdict</a>
+            </div>
+
+            <div class="separate2">
+            </div>
+
+            <button class="toggle-light-mode">
+                <i class="fas fa-sun"></i>
+            </button>
+
+            <!-- login button -->
+            <button id="login-btn" onclick="checkLogin()">Login</button>
+
+            <!-- Add Logout button directly -->
+            <button id="logout-btn" onclick="logout()">Logout</button>
+
+            <!-- separate line -->
+            <div class="separate3">
+            </div>
+
+        </div>
+
+        <!-- 3-dot menu button -->
+        <button class="menu-toggle" onclick="toggleSidePanel()">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Content -->
+
+        <h1>Asus ROG Strix Scar 18 with RTX 5070 Ti: A Powerhouse for Gaming and Creation</h1>
+        <div class="meta">By Tarr | April 12, 2025</div>
+
+        <div class="separate-main">
+        </div>
+
+        <h2 id="overview">Overview</h2>
+        <p>The Asus ROG Strix Scar 18 with Nvidia GeForce RTX 5070 Ti is a flagship gaming laptop that pushes the
+            boundaries of mobile performance. Launched as part of the 2025 lineup, this 18-inch beast combines
+            cutting-edge hardware with a premium design, targeting gamers and content creators who demand uncompromising
+            power. With a starting price of $2,699, it’s a significant investment, but does it deliver enough to justify
+            the cost? This review dives into its performance, display, design, and more to help you decide.</p>
+
+        <img src="images/asus-rog-strix-scar-18-2024-review-design-2.jpg" alt="ROG Strix Scar 18" class="hero"
+            onclick="openPopup(this.src)" />
+
+        <p><b>Specifications</b></p>
+        <table>
+            <tr>
+                <th>Component</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Processor</td>
+                <td>Intel Core Ultra 9 275HX</td>
+            </tr>
+            <tr>
+                <td>GPU</td>
+                <td>Nvidia GeForce RTX 5070 Ti</td>
+            </tr>
+            <tr>
+                <td>RAM</td>
+                <td>16GB (upgradable, supports up to 64GB DDR5 5600MHz)</td>
+            </tr>
+            <tr>
+                <td>Storage</td>
+                <td>1TB M.2 NVMe PCIe 4.0 SSD (upgradable, supports up to 4TB)</td>
+            </tr>
+            <tr>
+                <td>Display</td>
+                <td>18-inch, 2.5K (2560x1600), 16:10, mini-LED, 240Hz, 1,200 nits peak HDR</td>
+            </tr>
+            <tr>
+                <td>Cooling</td>
+                <td>Triple-fan system with vapor chamber, Conductonaut Extreme liquid metal</td>
+            </tr>
+            <tr>
+                <td>Operating System</td>
+                <td>Windows 11 Pro</td>
+            </tr>
+            <tr>
+                <td>Connectivity</td>
+                <td>2x Thunderbolt 5, USB 3.2 Gen 2 Type-C, USB 3.2 Gen 2 Type-A, HDMI, WiFi 6E</td>
+            </tr>
+            <tr>
+                <td>Battery</td>
+                <td>90Wh</td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td>Starting at $2,699</td>
+            </tr>
+        </table>
+
+        <h2 id="design">Design and Build</h2>
+        <p>The Asus ROG Strix Scar 18 boasts a premium build quality, characteristic of the ROG lineup. Constructed from
+            high-quality materials, it feels sturdy and durable, capable of withstanding the rigors of frequent
+            transport. The design is sleek yet bold, with customizable RGB lighting on the keyboard, chassis, and logo,
+            appealing to gamers who love a flashy aesthetic.</p>
+        <img src="images/img-1716_fpc6.1920.webp" alt="ROG Strix Scar 18" class="hero" onclick="openPopup(this.src)" />
+        <img src="images/img-1722_tex4.1920.webp" class="hero" onclick="openPopup(this.src)" />
+        <p>The keyboard is a standout, offering comfortable key travel and responsive switches, suitable for both gaming
+            and extended typing. The large trackpad is precise and supports multi-touch gestures, though most gamers
+            will likely use an external mouse. The inclusion of two Thunderbolt 5 ports is a forward-thinking addition,
+            providing ultra-fast data transfer and connectivity for external devices.</p>
+        <img src="images/img-1717_edzm.1920.webp" alt="ROG Strix Scar 18" class="hero" onclick="openPopup(this.src)" />
+        <p>One of the most practical features is the laptop’s upgradability. The RAM and SSD slots are easily
+            accessible, supporting up to 64GB of DDR5 5600MHz RAM (upgradable to 6400MHz) and 4TB of PCIe 4.0 storage,
+            with future compatibility for PCIe Gen 5 SSDs (ASUS). This makes the Strix Scar 18 a future-proof investment
+            for users who plan to upgrade over time.
+
+        <h2 id="display">Display</h2>
+        <p>The 18-inch 2.5K (2560x1600) mini-LED display is a highlight of the Strix Scar 18. With a 240Hz refresh rate,
+            3ms response time, and 1,200 nits peak HDR brightness, it offers an immersive experience for gaming and
+            media consumption. The mini-LED technology provides over 2,000 dimming zones, resulting in deep blacks and
+            excellent contrast, rivaling OLED panels in quality (ASUS). The display covers 100% of the DCI-P3 color
+            gamut, making it ideal for content creators who need accurate colors.</p>
+        <img src="images/img-1733_64bu.1920.webp" alt="ROG Strix Scar 18" class="hero" onclick="openPopup(this.src)" />
+        <p>The 16:10 aspect ratio provides extra vertical space, enhancing productivity for tasks like coding or video
+            editing. For gamers, the high refresh rate ensures smooth visuals in fast-paced titles, while G-SYNC support
+            eliminates screen tearing. Whether you’re playing competitive shooters or enjoying cinematic single-player
+            games, this display delivers a top-notch experience.</p>
+
+        <h2 id="performance">Performance</h2>
+        <p>At the core of the Asus ROG Strix Scar 18 is the Intel Core Ultra 9 275HX, a high-performance mobile
+            processor designed for demanding workloads. With excellent single-threaded and multi-threaded performance,
+            it handles everything from gaming to video editing and 3D rendering with ease. Paired with the Nvidia
+            GeForce RTX 5070 Ti, this laptop is built to tackle the latest AAA games at high settings.</p>
+        <img src="images/img-1735_ft9d.1920.webp" alt="ROG Strix Scar 18" class="hero" onclick="openPopup(this.src)" />
+        <p>The RTX 5070 Ti is a significant step up from its predecessors, offering 16GB of GDDR7 memory with a 256-bit
+            interface and 896 GB/s bandwidth, a 33% improvement over the RTX 4070 Ti Super (Tom's Hardware). Its compute
+            performance includes 43.9 TFLOPS FP32 and 352 TFLOPS FP16 (up to 1406 TFLOPS with FP4), making it capable of
+            handling advanced AI tasks and ray-traced games. The GPU supports DLSS 4 with multi-frame generation (MFG),
+            which can boost frame rates by 50-80% in supported titles, though the perceived improvement may vary.</p>
+        <p>In practical terms, the RTX 5070 Ti excels at 1440p gaming, delivering high frame rates in titles like
+            Cyberpunk 2077 and Call of Duty: Black Ops 6. For 4K gaming, DLSS 4 and upscaling ensure smooth performance,
+            though it’s not as powerful as the RTX 5090 found in higher-end configurations. For content creators, the
+            GPU’s capabilities make it suitable for video editing in Adobe Premiere Pro, 3D modeling in Blender, and
+            other resource-intensive tasks.</p>
+
+        <h2 id="cooling">Cooling</h2>
+        <p>To manage the heat generated by its high-performance components, the Strix Scar 18 employs a sophisticated
+            cooling system featuring three fans, a vapor chamber, and Conductonaut Extreme liquid metal on both the CPU
+            and GPU. This setup effectively keeps temperatures in check, even during intense gaming sessions, ensuring
+            consistent performance without thermal throttling.</p>
+        <img src="images/57f7486329d471025cc79047c7a30fc2.png" alt="ROG Strix Scar 18" class="hero"
+            onclick="openPopup(this.src)" />
+        <p>However, the cooling system is notably loud, especially in Turbo or Manual modes, where the GPU can consume
+            up to 175W and the CPU up to 80W, for a total system power of 255W (ASUS). This noise level may be a
+            drawback for users who prefer a quieter environment or plan to use the laptop in shared spaces. The
+            trade-off for such high performance is understandable, but it’s a point to consider.</p>
+
+        <h2 id="battery">Battery Life</h2>
+        <img src="images/img-1727_thqg.1920.webp" alt="ROG Strix Scar 18" class="hero" onclick="openPopup(this.src)" />
+        <p>As with most high-performance gaming laptops, battery life is a weak point. The 90Wh battery struggles to
+            keep up with the power-hungry 18-inch display and high-end components. Under heavy loads like gaming, the
+            battery may last only an hour or two, requiring the laptop to be plugged in for extended sessions. For
+            lighter tasks such as web browsing or document editing, it might last a few hours, but this is not a device
+            designed for all-day unplugged use.</p>
+
+        <h2 id="Price and Value">Price and Value</h2>
+        <p>Armoury Crate is your command center for performance modes, RGB tweaks, and fan curves. It's powerful but
+            bloated, with overlapping options that can confuse. Advanced Optimus handles GPU switching well, though I
+            had
+            to nudge a few apps to use the discrete GPU. As a Copilot+ PC, the G16's NPU enables slick AI
+            tricks—real-time
+            transcription, video enhancements—but gamers won't care much. The ecosystem feels polished, yet I wish ASUS
+            streamlined the software.</p>
+        <img src="images/m-bg-battery_1.webp" alt="ROG Strix Scar 18" class="hero" onclick="openPopup(this.src)" />
+
+        <h2 id="verdict">Verdict</h2>
+        <p>The Asus ROG Strix Scar 18 with RTX 5070 Ti is a formidable gaming laptop that excels in performance, display
+            quality, and build. Its Intel Core Ultra 9 275HX processor and RTX 5070 Ti GPU make it capable of running
+            the latest games at high settings and handling demanding creative tasks with ease. The 18-inch 2.5K mini-LED
+            display is a standout, offering vibrant visuals and smooth gameplay, while the upgradable design ensures
+            longevity.</p>
+        <p>However, the laptop’s high price, loud cooling system, and limited battery life are notable drawbacks. The
+            base 16GB RAM configuration may also feel restrictive for some, particularly when paired with a GPU boasting
+            16GB VRAM. For serious gamers and content creators who can afford the premium and don’t mind the noise, the
+            Strix Scar 18 is a worthy choice that delivers on its promise of top-tier performance.</p>
+        <div class="verdict">
+            <strong>Pros:</strong>
+            <ul>
+                <li><b>Exceptional Performance:</b> The Intel Core Ultra 9 275HX and RTX 5070 Ti deliver top-tier gaming
+                    and
+                    productivity performance.</li>
+                <li><b>Stunning Display:</b> The 18-inch 2.5K mini-LED display with 240Hz refresh rate is vibrant and
+                    immersive.</li>
+                <li><b>Premium Build:</b> Sturdy construction with customizable RGB lighting and a comfortable keyboard.
+                </li>
+                <li><b>Upgradability:</b> Easy access to RAM and SSD slots for future upgrades.</li>
+                <li><b>Advanced Connectivity:</b> Includes two Thunderbolt 5 ports for fast data transfer.</li>
+            </ul>
+            <strong>Cons:</strong>
+            <ul>
+                <li><b>High Price:</b> Starting at $2,699, it’s a costly investment.</li>
+                <li><b>Loud Cooling:</b> The triple-fan system is effective but noisy under load.</li>
+                <li><b>Limited Battery Life:</b> Not suitable for extended unplugged use.</li>
+                <li><b>Base RAM:</b> 16GB may be restrictive for some users, requiring upgrades.</li>
+            </ul>
+        </div>
+
+        <!-- botton review -->
+        <div class="bottom-review">
+            <div class="score-section">
+                <div class="score-box">8.5</div>
+                <div>
+                    <h3>Good</h3>
+                    <p>The Asus ROG Strix Scar 18 with RTX 5070 Ti earns an 8.5/10. It excels in performance, display
+                        quality, and build, making it a top choice for gamers and content creators. The Intel Core Ultra
+                        9 275HX and RTX 5070 Ti deliver outstanding gaming and productivity capabilities, while the
+                        18-inch 2.5K mini-LED display offers vibrant visuals and smooth gameplay. Its premium design and
+                        upgradability add to its appeal. However, the high price ($2,699 starting), loud cooling system,
+                        limited battery life, and base 16GB RAM slightly temper its overall value, preventing a higher
+                        score.</p>
+                    <div class="reviewer">Tarr</div>
+                </div>
+            </div>
+            <img src="images/a778f72157b89cbd12d45353252ba4fb.png" alt="Laptop Photo" onclick="openPopup(this.src)" />
+        </div>
+    </div>
+
+
+    <!-- Popup container -->
+    <div id="image-popup" class="popup">
+        <button class="close-btn" onclick="closePopup()">×</button>
+        <img id="popup-img" src="">
+    </div>
+
+    <!-- comment section -->
+    <div id="comment-section">
+        <h3>Comment Section</h3>
+        <textarea id="comment-input" placeholder="Write a comment..." onclick="checkLogin()"></textarea>
+        <button onclick="postComment()">Post</button>
+        <div id="comments-list"></div>
+    </div>
+
+    <!-- delete confirmation -->
+    <div id="custom-confirm" class="confirm-overlay" style="display:none;">
+        <div class="confirm-box">
+            <p id="confirm-message">Are you sure you want to delete this comment?</p>
+            <div class="confirm-actions">
+                <button id="confirm-yes">Yes</button>
+                <button id="confirm-no">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js" defer></script>
+</body>
+
+</html>
