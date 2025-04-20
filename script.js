@@ -6,21 +6,21 @@ let currentUser = null;
 // Define navLinks globally to avoid scope issues
 const navLinks = document.querySelectorAll('.side-panel .nav-links a');
 
-// Article ID to URL mapping based on index.html
+// Article ID to URL mapping based on index.html (fixed to use relative paths)
 const articleIdToUrl = {
-  'story-1': '/review1.html',
-  'story-2': '/review4.html',
-  'story-3': '/review7.html',
-  'story-4': '/review10.html',
-  'article-1': '/review2.html',
-  'article-2': '/review5.html',
-  'article-3': '/review8.html',
-  'article-4': '/review11.html',
-  'article-5': '/review13.html',
-  'more-story-1': '/review3.html',
-  'more-story-2': '/review6.html',
-  'more-story-3': '/review9.html',
-  'more-story-4': '/review12.html'
+  'story-1': 'review1.html',
+  'story-2': 'review4.html',
+  'story-3': 'review7.html',
+  'story-4': 'review10.html',
+  'article-1': 'review2.html',
+  'article-2': 'review5.html',
+  'article-3': 'review8.html',
+  'article-4': 'review11.html',
+  'article-5': 'review13.html',
+  'more-story-1': 'review3.html',
+  'more-story-2': 'review6.html',
+  'more-story-3': 'review9.html',
+  'more-story-4': 'review12.html'
 };
 
 // Utility function to escape HTML special characters
@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
         activeLink.classList.add('active');
       } else {
         // Default to Home if no match
-        const homeLink = Array.from(navLinks).find(link => link.getAttribute('href') === '/index.html');
+        const homeLink = Array.from(navLinks).find(link => link.getAttribute('href') === 'index.html');
         if (homeLink) {
           homeLink.classList.add('active');
         }
@@ -345,7 +345,7 @@ function performSearch() {
 
   searchResults.innerHTML = "";
 
-  fetch('/index.html')
+  fetch('index.html') // Fixed to use relative path
     .then(response => {
       if (!response.ok) {
         throw new Error(`Failed to fetch index.html: ${response.status} ${response.statusText}`);
@@ -430,7 +430,7 @@ function displaySearchResults(results, searchResults) {
     miniCard.className = 'mini-card';
 
     // Use the articleIdToUrl mapping to get the correct URL
-    const articleUrl = articleIdToUrl[result.articleId] || '/index.html'; // Fallback to index.html if no mapping
+    const articleUrl = articleIdToUrl[result.articleId] || 'index.html'; // Fallback to index.html if no mapping
     let cardContent = `<a href="${escapeHTML(articleUrl)}" class="mini-card-link" onclick="closeSearchPopup()">`;
     if (result.imageSrc) {
       cardContent += `<img src="${escapeHTML(result.imageSrc)}" alt="${escapeHTML(result.title)}" class="mini-card-img">`;
